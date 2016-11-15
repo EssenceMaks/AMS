@@ -5,13 +5,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'amsgroups#index'
 
-  get 'amsgroups/index'
+  #get 'amsgroups/index'
       resources :amsgroups
 
-  get 'amsfoods/index'
+  #get 'amsfoods/index'
       resources :amsfoods
 
-  get 'amsstones/index'
+  #get 'amsstones/index'
       resources :amsstones
 
   # Example of regular route:
