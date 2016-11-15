@@ -1,0 +1,153 @@
+// Place all the styles related to the ams_foods controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+::selection {
+  background-color: #FF0504;
+}
+
+/* HEADER */
+    .foodheadmain {
+      position: relative;
+      width: auto;
+      height: 200px;
+      background-color: white;
+      background-image: url('amsgroup.png');
+    }
+
+    .inline {
+      display: inline-block;
+    }
+    .foodhead {
+      position: relative;
+      width: 1190px;
+      margin: 0px auto;
+      background-color: #fb1b36;
+      height: 200px;
+      background-image: url('plate.png');
+    }
+
+    .foodlanguage {
+      background-color: none;
+      width: 75px;
+      margin-left: -75px;
+    }
+        .language {
+          background-color: #381D68;
+          margin: 5px 0px;
+          margin-top: 20px;
+          padding: 5px 5px;
+          border-radius: 6px 0px 0px 6px;
+          list-style-type: none;
+        }
+
+    .foodlogo{
+      position: relative;
+      top: -50px;
+      width: 1182px;
+      height: 150px;
+    }
+
+    .foodcontact {
+      width: 70px;
+      margin-right: -70px;
+      margin-top: 10px;
+    }
+
+        .contact {
+          margin: 5px 0px;
+          padding: 0px 5px;
+          list-style-type: none;
+        }
+        .contacts_to_food {
+          width: 50px;
+          height: 50px;
+        }
+/* HEADER */
+
+
+.tabbedf {
+  background: white;
+  width: 1200px;
+  margin: 5px auto;
+}
+
+.tabbedf > input {
+  display: none;
+}
+
+.tabbedf > label {
+  display: block;
+  width: 290px;
+  text-align: center;
+  float: left;
+  padding: 12px 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.tabbedf > label:hover,
+.tabbedf > input:checked + label {
+  background: #fb1b36;
+  background-image: url('plate.png');
+}
+
+.tabsf {
+  clear: both;
+  perspective: 600px;
+}
+
+.tabsf > div {
+  background: white;
+  background-image: url('plate.png');
+  width: 1190px;
+  margin-right: 5px;
+  margin-left: 5px;
+  position: absolute;
+  border: 2px solid #FF0504;
+  padding: 10px 30px 40px;
+  line-height: 1.4em;
+  opacity: 0;
+  transform: rotateX(-20deg);
+  transform-origin: top center;
+  transition: opacity .3s, transform 1s;
+  z-index: 0;
+}
+
+#ftab-nav-1:checked ~ .tabsf > div:nth-of-type(1),
+#ftab-nav-2:checked ~ .tabsf > div:nth-of-type(2),
+#ftab-nav-3:checked ~ .tabsf > div:nth-of-type(3),
+#ftab-nav-4:checked ~ .tabsf > div:nth-of-type(4),
+#ftab-nav-5:checked ~ .tabsf > div:nth-of-type(5){
+  transform: rotateX(0deg);
+  opacity: 1;
+  z-index: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .tabbedf { width: 400px }
+  .tabbedf > label { display: none }
+  .tabsf > div {
+    width: 400px;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    position: relative;
+    transform: none;
+    margin-bottom: 60px;
+  }
+  .tabsf > div h2 {
+    border-bottom: 2px solid #4EC6DE;
+    padding-bottom: .5em;
+  }
+}

@@ -1,0 +1,90 @@
+%div.stoneheadmain
+  %div.formargin
+    %div.stonehead
+      %div.stonelanguage.inline
+        %ul
+          %li.language EN
+          %li.language AR
+          %li.language RU 
+      %div.stonelogo.inline
+        .bootstile
+          .col-xs-5.col-md-5
+            %div.center.inline
+              = link_to image_tag( 'AMS1.png', :class => 'ams_logo_head' ), amsgroups_path, target: '_blank'
+          .col-xs-7.col-md-7
+            %div.slides.inline
+              %ul
+                %li
+                  =image_tag( '1.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p МРАМОРНЫЕ ИЗДЕЛИ
+                %li
+                  =image_tag( '2.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p ПЛИТКА ИЗ МРАМОРА
+                %li
+                  =image_tag( '8.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p МРАМОР ТЁМНЫЙ
+                %li
+                  =image_tag( '4.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p МРАМОР БЕЛЫЙ
+                %li
+                  =image_tag( '6.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p МРАМОР МРАМОРНЫЙ
+                %li
+                  =image_tag( '1.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p МРАМОРИЩЕ
+      %div.stonecontact.inline
+        %li.contact 
+          = link_to image_tag( 'skype.png', :class => 'contacts_to_stone' ), amsgroups_path, target: '_blank'
+        %li.contact
+          = link_to image_tag( 'github.png', :class => 'contacts_to_stone' ), amsgroups_path, target: '_blank'
+        %li.contact
+          = link_to image_tag( 'fb.png', :class => 'contacts_to_stone' ), amsgroups_path, target: '_blank'
+
+.tabbedstones
+  %input{:type=>"radio", :name => "sttabs", :id=>"stonestab-nav-1", :checked=> true}
+    %label{:for=>"stonestab-nav-1"} AMS Group 
+  %input{:type=>"radio", :name => "sttabs", :id=>"stonestab-nav-2"}
+    %label{:for=>"stonestab-nav-2"} AMS How we work
+  %input{:type=>"radio", :name => "sttabs", :id=>"stonestab-nav-3"}
+    %label{:for=>"stonestab-nav-3"} Production 
+  %input{:type=>"radio", :name => "sttabs", :id=>"stonestab-nav-4"}
+    %label{:for=>"stonestab-nav-4"} контакты
+  %div{ :class => ['stonestabs']}
+    %div
+      %h2 главная
+      %p О компании   Торговая компания АМС Интернешнл Груп была создана с целью развития и улучшения торговых отношений между украинскими и иностранными покупателями и продавцами различных товаров.  Мы работаем с производственными компаниями, частным лицами и агентами по всей территории Украины и за рубежом.  Благодаря накопленному опыту работы в Украине мы знаем:  какие товары и продукты востребованы сегодня; по каким ценам они интересны для украинских и иностранных импортеров, экспортеров, потребителей товаров и продуктов; какие факторы влияют на деятельность торговых компаний – импортеров и экспортеров; при каких условиях торговые компании имеют возможность совершать сделки и добиться максимального результата специфику украинского налогового и таможенного законодательства, от которых в значительной степени зависит деятельность импортеров и экспортеров. Наше видение  Стать торговой компанией  №1 в Украине и поддерживать высокий уровень для большинства импортеров и экспортеров  товаров и продуктов. Наша миссия  Наша торговая компания стремится предоставлять необходимые товары и услуги для международных и отечественных клиентов и партнеров своевременно и по приемлемым ценам.  Мы гордимся нашей ролью в торговых отношениях и делаем все, что от нас зависит для оказания услуг на высшем уровне и поддержанию хороших взаимоотношений с компаниями, которые принимают участие в экспортных и импортных операциях с Украиной.  Компания осуществляет  торговые сделки, а также оказывает профессиональные услуги для производителей и покупателей.  АМС Интернешнл Груп является экспортером и импортером.  Мы специализируемся  на различных видах товаров – полезные ископаемые,  гранит, продукты питания, и др.   АМС Интернешнл Груп имеет прямые контакты с производителями и продавцами товаров, ритейл сетями, брокерами и дистрибьюторами, которые обеспечивают нам прочные позиции на украинском рынке. Это способствует улучшению отношений между украинскими и иностранными участниками торговли.  Компания постоянно растет с момента ее основания и расширяет границы своей деятельности в странах восток и Эвропы , увеличивает ассортимент товаров, а также  наращивает свои торговые обороты на украинском рынке.  Мы с нетерпением ждем сотрудничества с Вами!   Команда компании  АМС Интернешнл Груп
+      %p About us   The Trading Company AMS International Group is established for development and improvement of trade relations among the Ukrainian and foreign buyers and sellers of various goods. We work with leading manufacturing companies, private individuals and agents across the whole territory of Ukraine and abroad. Thanks to the experience which we have gained working in Ukraine, we know: which goods and products are in demand today; what prices are the most acceptable for Ukrainian and foreign importers, exporters, consumers of goods and products; what the factors are affecting activities of the traders, exporters, importers; the conditions on which the trading companies have an opportunity to make transactions and achieve the best results the specifics of the Ukrainian tax and customs legislation of which largely depends on the importers and exporters activity. Our vision To be number 1 trading company in Ukraine and maintain a high level for most importers and exporters, goods and products. Our mission Our trade company seeks to provide the required products and services for the domestic and international clients and partners at affordable prices. We are proud of our role in trade relations and do our part for the provision of services in the best way as well as maintain good relationships with the companies participates import and export transactions with Ukraine. The Company executes the trades and also on providing the professional services for the producers and buyers. The AMS International Group is an exporter and importer. We specialized in various goods - mineral deposits, granite, food products and etc. The AMS International Group has direct contacts with producers and buyers of goods, retail networks, brokers and distributors that provide us strong positions in Ukrainian markets. It encourages considerably toward improving the relations between Ukrainian and foreign traders. Since its founding The Company has achieved strong growth and expands the frontiers of its business in the East and Europe, expands the range of goods as well as increases its trade turnovers in the Ukrainian market.   We look forward to working closely with you! The Company AMS International Group team
+      .navbar-brand= link_to "AMS Group", amsgroups_path
+    %div
+      %h2 главная
+      %p Компания <strong>AMS Internatioanl</strong> предоставляет услуги доставки\заказа материала и изделий из гранита, а так же предоставляет отдельные услуги грузодоставки подобных материалов между объектами, по Украине и странам Евросоюза. Более детальную информацию о материалах, их цене и контакты Вы можете найти в соответствующих разделах сайта.
+    %div
+      %h2 главная
+      %p Компания <strong>AMS Internatioanl</strong> предоставляет услуги доставки\заказа материала и изделий из гранита, а так же предоставляет отдельные услуги грузодоставки подобных материалов между объектами, по Украине и странам Евросоюза. Более детальную информацию о материалах, их цене и контакты Вы можете найти в соответствующих разделах сайта.
+      %div.stone_gallery
+        = link_to image_tag( 'plate1.jpg', :class => 'stone_gallery_foto' ), amsgroups_path, target: '_blank'
+      %div.stone_gallery
+        = link_to image_tag( 'plate1.jpg', :class => 'stone_gallery_foto' ), amsgroups_path, target: '_blank'
+      %div.stone_gallery
+        = link_to image_tag( 'plate1.jpg', :class => 'stone_gallery_foto' ), amsgroups_path, target: '_blank'
+      %div.stone_gallery
+        = link_to image_tag( 'plate1.jpg', :class => 'stone_gallery_foto' ), amsgroups_path, target: '_blank'
+      %div.stone_gallery
+        = link_to image_tag( 'plate1.jpg', :class => 'stone_gallery_foto' ), amsgroups_path, target: '_blank'
+      %div.stone_gallery
+        = link_to image_tag( 'plate1.jpg', :class => 'stone_gallery_foto' ), amsgroups_path, target: '_blank'
+      %div.stone_gallery
+        = link_to image_tag( 'plate1.jpg', :class => 'stone_gallery_foto' ), amsgroups_path, target: '_blank'
+      %div.stone_gallery
+        = link_to image_tag( 'plate1.jpg', :class => 'stone_gallery_foto' ), amsgroups_path, target: '_blank'
+      %div.stone_gallery
+        = link_to image_tag( 'plate1.jpg', :class => 'stone_gallery_foto' ), amsgroups_path, target: '_blank'
+    %div
+      %h2 главная
+      %p Компания <strong>AMS Internatioanl</strong> предоставляет услуги доставки\заказа материала и изделий из гранита, а так же предоставляет отдельные услуги грузодоставки подобных материалов между объектами, по Украине и странам Евросоюза. Более детальную информацию о материалах, их цене и контакты Вы можете найти в соответствующих разделах сайта.

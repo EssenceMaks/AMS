@@ -1,0 +1,75 @@
+%div.foodheadmain
+  %div.formargin
+    %div.foodhead
+      %div.foodlanguage.inline
+        %ul
+          %li.language EN
+          %li.language AR
+          %li.language RU 
+      %div.foodlogo.inline
+        .bootstile
+          .col-xs-5.col-md-5
+            %div.center.inline
+              = link_to image_tag( 'AMS1.png', :class => 'ams_logo_head' ), amsgroups_path, target: '_blank'
+          .col-xs-7.col-md-7
+            %div.slides.inline
+              %ul
+                %li
+                  =image_tag( '1.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p МУКА
+                %li
+                  =image_tag( '2.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p КАЧЕСТВО
+                %li
+                  =image_tag( '8.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p ПОДСОЛНЕЧНОЕ МАСЛО
+                %li
+                  =image_tag( '4.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p ПЕЛЬМЕНИ
+                %li
+                  =image_tag( '6.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p ДОВЕРИЕ
+                %li
+                  =image_tag( '1.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p ЗЕРНО
+      
+      %div.groupcontact.inline
+        %li.contact 
+          = link_to image_tag( 'google-plus-3-512.png', :class => 'contacts_to_group' ), amsgroups_path, target: '_blank'
+        %li.contact
+          = link_to image_tag( 'facebook-3-512.png', :class => 'contacts_to_group' ), amsgroups_path, target: '_blank'
+        %li.contact
+          = link_to image_tag( 'skype-3-512.png', :class => 'contacts_to_group' ), amsgroups_path, target: '_blank'
+
+.tabbedf
+  %input{:type=>"radio", :name => "tabsf", :id=>"ftab-nav-1", :checked=> true}
+    %label{:for=>"ftab-nav-1"} AMS Foods 
+  %input{:type=>"radio", :name => "tabsf", :id=>"ftab-nav-2"}
+    %label{:for=>"ftab-nav-2"} AMS Foods who we are
+  %input{:type=>"radio", :name => "tabsf", :id=>"ftab-nav-3"}
+    %label{:for=>"ftab-nav-3"} Production 
+  %input{:type=>"radio", :name => "tabsf", :id=>"ftab-nav-4"}
+    %label{:for=>"ftab-nav-4"} Contacts
+  %div{ :class => ['tabsf']}
+    %div
+      %h2 главная
+      %p Компания <strong>AMS Internatioanl</strong> предоставляет услуги доставки\заказа материала и изделий из гранита, а так же предоставляет отдельные услуги грузодоставки подобных материалов между объектами, по Украине и странам Евросоюза. Более детальную информацию о материалах, их цене и контакты Вы можете найти в соответствующих разделах сайта.
+      .navbar-brand= link_to "AMS Group", amsgroups_path
+    %div
+      %h2 главная
+      %p Компания <strong>AMS Internatioanl</strong> предоставляет услуги доставки\заказа материала и изделий из гранита, а так же предоставляет отдельные услуги грузодоставки подобных материалов между объектами, по Украине и странам Евросоюза. Более детальную информацию о материалах, их цене и контакты Вы можете найти в соответствующих разделах сайта.
+    %div
+      %h2 главная
+      %p Компания <strong>AMS Internatioanl</strong> предоставляет услуги доставки\заказа материала и изделий из гранита, а так же предоставляет отдельные услуги грузодоставки подобных материалов между объектами, по Украине и странам Евросоюза. Более детальную информацию о материалах, их цене и контакты Вы можете найти в соответствующих разделах сайта.
+    %div
+      %h2 главная
+      %p Компания <strong>AMS Internatioanl</strong> предоставляет услуги доставки\заказа материала и изделий из гранита, а так же предоставляет отдельные услуги грузодоставки подобных материалов между объектами, по Украине и странам Евросоюза. Более детальную информацию о материалах, их цене и контакты Вы можете найти в соответствующих разделах сайта.
+
+
+

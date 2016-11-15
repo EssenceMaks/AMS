@@ -1,0 +1,2 @@
+module AmsfoodsHelper
+end
