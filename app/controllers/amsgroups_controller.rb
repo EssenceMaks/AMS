@@ -1,5 +1,5 @@
 class AmsgroupsController < ApplicationController
-	def welcome
+	def index
 		
 	end
 end

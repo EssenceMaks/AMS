@@ -3,15 +3,15 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'amsgroups#welcome'
+  root 'amsgroups#index'
 
-  get "amsgroups/welcome"
+  get 'amsgroups/index'
       resources :amsgroups
 
-  get "amsfoods/welcome"
+  get 'amsfoods/index'
       resources :amsfoods
 
-  get "amsstones/welcome"
+  get 'amsstones/index'
       resources :amsstones
 
   # Example of regular route:

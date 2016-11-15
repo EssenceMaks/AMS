@@ -1,5 +1,6 @@
 class AmsfoodsController < ApplicationController
-	def welcome
+	def index
+		
 		
 	end
 end
