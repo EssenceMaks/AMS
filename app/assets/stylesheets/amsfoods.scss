@@ -14,12 +14,24 @@
   background-color: #FF0504;
 }
 
+body {
+}
+
+p {
+  color: gold;
+}
+
+h1 {
+  color: gold;
+}
+
+
 /* HEADER */
     .foodheadmain {
       position: relative;
       width: auto;
       height: 200px;
-      background-color: white;
+      background-color: #1a0120;
       background-image: url('amsgroup.png');
     }
 
@@ -75,7 +87,7 @@
 
 
 .tabbedf {
-  background: white;
+  background: #1a0120;
   width: 1200px;
   margin: 5px auto;
 }
@@ -108,7 +120,7 @@
 }
 
 .tabsf > div {
-  background: white;
+  background: #1a0120;
   background-image: url('plate.png');
   width: 1190px;
   margin-right: 5px;
@@ -133,6 +145,30 @@
   opacity: 1;
   z-index: 1;
 }
+
+.amsfood_maintext{
+  width: 1094px;
+  height: auto;
+  margin: 10px 15px;
+  color: gold;
+  line-height: 0.9;
+
+}
+.amsfood_maintext p{
+  border-left: 2px solid #fee258;
+  border-right: 2px solid #fee258;
+  padding: 0px 12px;
+  font-size: 20px;
+  font-family: 'Ubuntu';
+  margin-bottom: 16px;
+}
+
+.amsfood_maintext h2{
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Ubuntu';
+}
+
 
 @media screen and (max-width: 700px) {
   .tabbedf { width: 400px }

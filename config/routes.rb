@@ -7,13 +7,14 @@ Rails.application.routes.draw do
 
   #get 'amsgroups/index'
       resources :amsgroups
+      resources :amsgrouppictures
 
   #get 'amsfoods/index'
       resources :amsfoods
-
+      resources :amsfoodpictures
   #get 'amsstones/index'
       resources :amsstones
-
+      resources :amsstonepictures
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

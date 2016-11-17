@@ -6,17 +6,22 @@
   box-sizing: border-box;
 }
 
-body {
-  background-image: url('points2.png');
-  font: 1em 'PT Sans', sans-serif;
-  color: #EBCB79;  
+
+
+.colorgold {
+  color: #EBCB79; 
+}
+
+
+label {
+  color: gold;
 }
 
 ::selection {
   background-color: #F87911;
 }
 
-/* HEADER */ 
+/* HEADER #361c65*/ 
 
     .groupheadmain {
       position: relative;
@@ -118,6 +123,7 @@ body {
   font-size: 20px;
   font-family: 'PT Sans';
   color: #EBCB79;
+  line-height: 0.9;
   float: left;
   padding: 12px 20px;
   margin-right: 5px;
@@ -169,6 +175,28 @@ body {
   z-index: 1;
 }
 
+.amsgroup_maintext {
+  width: 1094px;
+  height: auto;
+  margin: 10px 15px;
+}
+
+
+.amsgroup_maintext p{
+  border-left: 2px solid #fee258;
+  border-right: 2px solid #fee258;
+  padding: 0px 12px;
+  font-size: 20px;
+  font-family: 'PT Sans';
+  margin-bottom: 16px;
+  line-height: 0.9;
+}
+
+.amsgroup_maintext h2{
+  text-align: center;
+  font-size: 50px;
+  font-family: 'PT Sans';
+}
 @media screen and (max-width: 700px) {
   .tabbed { width: 400px }
   .tabbed > label { display: none }
@@ -479,26 +507,6 @@ body {
     margin: 0px;
 }
 
-.amsfood_maintext{
-  width: 1094px;
-  height: auto;
-  margin: 10px 15px;
-
-}
-.amsfood_maintext p{
-  border-left: 2px solid #fee258;
-  border-right: 2px solid #fee258;
-  padding: 0px 12px;
-  font-size: 20px;
-  font-family: 'PT Sans';
-  margin-bottom: 16px;
-}
-
-.amsfood_maintext h2{
-  text-align: center;
-  font-size: 50px;
-  font-family: 'PT Sans';
-}
 
 .amsgroupfshead{
   height: 50px;

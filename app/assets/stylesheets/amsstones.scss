@@ -8,7 +8,6 @@
   box-sizing: border-box;
 }
 
-
 ::selection {
   background-color: #575757;
 }
@@ -74,7 +73,8 @@
 
 
 .tabbedstones {
-  background: white;
+  color: gold;
+  background-color: #1e2969;
   width: 1200px;
   margin: 5px auto;
 }
@@ -107,7 +107,7 @@
 }
 
 .stonestabs > div {
-  background: white;
+  background: #381D68;
   background-image: url('plate.png');
   width: 1190px;
   margin-right: 5px;
