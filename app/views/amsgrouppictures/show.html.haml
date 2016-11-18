@@ -1,0 +1,9 @@
+%h1 this is the face of user, like a person status
+%h2= @amsgrouppicture.titlerus
+%br
+%h3= @amsgrouppicture.descriptionrus
+%br
+
+= link_to "Back", amsgrouppictures_path, class: "btn btn-default"
+= link_to "Edit", edit_amsgrouppicture_path, class: "btn btn-default"
+= link_to "delete", amsgrouppicture_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"

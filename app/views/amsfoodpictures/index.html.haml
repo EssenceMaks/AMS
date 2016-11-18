@@ -1,0 +1,35 @@
+%div.groupheadmain
+  %div.formargin
+    %div.grouphead
+      %div.grouplanguage.inline
+        %ul
+          %li.language EN
+          %li.language AR
+          %li.language RU 
+      %div.grouplogo.inline
+        .bootstile
+          .col-xs-5.col-md-5
+            %div.center.inline
+              = link_to image_tag( 'logo-ams1.png', :class => 'ams_logo_head' ), amsgroups_path, target: '_blank'
+          .col-xs-7.col-md-7
+            %div.slides.inline
+              - @amsfoodpicture.each do |foodpicture|
+                %h2= link_to foodpicture.titlerus, foodpicture
+
+      %div.groupcontact.inline
+        %li.contact 
+          = link_to image_tag( 'google-plus-3-512.png', :class => 'contacts_to_group' ), amsgroups_path, target: '_blank'
+        %li.contact
+          = link_to image_tag( 'facebook-3-512.png', :class => 'contacts_to_group' ), amsgroups_path, target: '_blank'
+        %li.contact
+          = link_to image_tag( 'skype-3-512.png', :class => 'contacts_to_group' ), amsgroups_path, target: '_blank'
+
+%div.formargin
+  .tabbed
+    
+
+
+           
+
+ 
+  

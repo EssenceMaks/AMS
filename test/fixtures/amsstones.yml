@@ -4,6 +4,7 @@ one:
   titlerus: MyString
   titleeng: MyString
   titlear: MyString
+  number: MyString
   descriptionrus: MyText
   descriptioneng: MyText
   descriptionar: MyText
@@ -14,6 +15,7 @@ two:
   titlerus: MyString
   titleeng: MyString
   titlear: MyString
+  number: MyString
   descriptionrus: MyText
   descriptioneng: MyText
   descriptionar: MyText

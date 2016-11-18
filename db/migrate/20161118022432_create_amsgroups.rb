@@ -1,6 +1,6 @@
-class CreateAmsnovosts < ActiveRecord::Migration
+class CreateAmsgroups < ActiveRecord::Migration
   def change
-    create_table :amsnovosts do |t|
+    create_table :amsgroups do |t|
       t.string :titlerus
       t.string :titleeng
       t.string :titlear

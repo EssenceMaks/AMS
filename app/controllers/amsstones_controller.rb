@@ -38,13 +38,13 @@ class AmsstonesController < ApplicationController
 
 	def destroy
 		@amsstone.destroy
-		redirect_to root_path
+		redirect_to @amsstone
 	end
 
 	private
 
 	def amsstone_params
-		params.require(:amsstone).permit(:titlerus, :titleeng, :titlear, :descriptionrus, :descriptioneng, :descriptionar, :category)
+		params.require(:amsstone).permit(:titlerus, :titleeng, :titlear, :number, :descriptionrus, :descriptioneng, :descriptionar, :category)
 	end
 
 	def find_amsstone

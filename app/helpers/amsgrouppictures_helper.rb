@@ -1,0 +1,2 @@
+module AmsgrouppicturesHelper
+end

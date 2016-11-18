@@ -1,0 +1,2 @@
+module AmsfoodpicturesHelper
+end

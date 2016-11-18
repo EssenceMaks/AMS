@@ -1,0 +1,9 @@
+%h1 this is the face of user, like a person status
+%h2= @amsfood.titlerus
+%br
+%h3= @amsfood.descriptionrus
+%br
+
+= link_to "Back", amsfoods_path, class: "btn btn-default"
+= link_to "Edit", edit_amsfood_path, class: "btn btn-default"
+= link_to "delete", amsfood_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
