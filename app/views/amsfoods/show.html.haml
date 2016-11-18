@@ -6,5 +6,6 @@
 %br
 
 = link_to "Back", amsfoods_path, class: "btn btn-default"
-= link_to "Edit", edit_amsfood_path, class: "btn btn-default"
-= link_to "delete", amsfood_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
+- if user_signed_in?
+  = link_to "Edit", edit_amsfood_path, class: "btn btn-default"
+  = link_to "delete", amsfood_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"

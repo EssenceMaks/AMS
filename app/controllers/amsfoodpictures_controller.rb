@@ -1,5 +1,6 @@
 class AmsfoodpicturesController < ApplicationController
 	before_action :find_amsfoodpicture, only: [ :show, :edit, :update, :destroy]
+	before_action :authenticate_user!, except: [:index, :show]
 
 
 	def index
@@ -11,11 +12,11 @@ class AmsfoodpicturesController < ApplicationController
 	end
 
 	def new
-		@amsfoodpicture = Amsfoodpicture.new
+		@amsfoodpicture = current_user.amsfoodpictures.build
 	end
 
 	def create
-		@amsfoodpicture = Amsfoodpicture.new(amsfoodpicture_params)
+		@amsfoodpicture = current_user.amsfoodpictures.build(amsfoodpicture_params)
 
 		if @amsfoodpicture.save
 			redirect_to @amsfoodpicture, notice: "wish was succesfully updated!"

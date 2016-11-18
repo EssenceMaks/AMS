@@ -6,5 +6,6 @@
 %br
 
 = link_to "Back", amsgroups_path, class: "btn btn-default"
-= link_to "Edit", edit_amsgroup_path, class: "btn btn-default"
-= link_to "delete", amsgroup_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
+- if user_signed_in?
+  = link_to "Edit", edit_amsgroup_path, class: "btn btn-default"
+  = link_to "delete", amsgroup_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"

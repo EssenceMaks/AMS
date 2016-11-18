@@ -1,6 +1,6 @@
 class AmsstonesController < ApplicationController
 	before_action :find_amsstone, only: [ :show, :edit, :update, :destroy]
-
+	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
 		@amsstone = Amsstone.all.order("created_at DESC")
@@ -11,11 +11,11 @@ class AmsstonesController < ApplicationController
 	end
 
 	def new
-		@amsstone = Amsstone.new
+		@amsstone = current_user.amsstones.build
 	end
 
 	def create
-		@amsstone = Amsstone.new(amsstone_params)
+		@amsstone = current_user.amsstones.build(amsstone_params)
 
 		if @amsstone.save
 			redirect_to @amsstone, notice: "wish was succesfully updated!"

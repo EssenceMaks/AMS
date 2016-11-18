@@ -1,5 +1,6 @@
 class AmsgroupsController < ApplicationController
 	before_action :find_amsgroup, only: [ :show, :edit, :update, :destroy]
+	before_action :authenticate_user!, except: [:index, :show]
 
 
 	def index
@@ -11,11 +12,11 @@ class AmsgroupsController < ApplicationController
 	end
 
 	def new
-		@amsgroup = Amsgroup.new
+		@amsgroup = current_user.amsgroups.build
 	end
 
 	def create
-		@amsgroup = Amsgroup.new(amsgroup_params)
+		@amsgroup = current_user.amsgroups.build(amsgroup_params)
 
 		if @amsgroup.save
 			redirect_to @amsgroup, notice: "wish was succesfully updated!"

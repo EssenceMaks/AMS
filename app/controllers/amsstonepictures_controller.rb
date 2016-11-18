@@ -1,5 +1,6 @@
 class AmsstonepicturesController < ApplicationController
 	before_action :find_amsstonepicture, only: [ :show, :edit, :update, :destroy]
+	before_action :authenticate_user!, except: [:index, :show]
 
 
 	def index
@@ -11,11 +12,11 @@ class AmsstonepicturesController < ApplicationController
 	end
 
 	def new
-		@amsstonepicture = Amsstonepicture.new
+		@amsstonepicture = current_user.amsstonepictures.build
 	end
 
 	def create
-		@amsstonepicture = Amsstonepicture.new(amsstonepicture_params)
+		@amsstonepicture = current_user.amsstonepictures.build(amsstonepicture_params)
 
 		if @amsstonepicture.save
 			redirect_to @amsstonepicture, notice: "wish was succesfully updated!"
