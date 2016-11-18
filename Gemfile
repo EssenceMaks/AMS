@@ -21,7 +21,7 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'devise', '~> 4.2'
-gem 'aws-sdk', '~> 2.6', '>= 2.6.24'
+gem 'aws-sdk', '< 2.0'
 
 
 # Use jquery as the JavaScript library
