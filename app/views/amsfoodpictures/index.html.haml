@@ -13,8 +13,14 @@
               = link_to image_tag( 'logo-ams1.png', :class => 'ams_logo_head' ), amsgroups_path, target: '_blank'
           .col-xs-7.col-md-7
             %div.slides.inline
-              - @amsfoodpicture.each do |foodpicture|
-                %h2= link_to foodpicture.titlerus, foodpicture
+              %ul
+                - @amsfoodpicture.each_slice(1) do |foodpicture|
+                  - foodpicture.each do  |s|
+                    %li
+                      = link_to s do
+                        = image_tag s.imagefoodpicture.url(:medium)
+                      %div 
+                        %h2= link_to s.titlerus, s
 
       %div.groupcontact.inline
         %li.contact 

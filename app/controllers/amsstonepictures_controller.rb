@@ -44,7 +44,7 @@ class AmsstonepicturesController < ApplicationController
 	private
 
 	def amsstonepicture_params
-		params.require(:amsstonepicture).permit(:titlerus, :titleeng, :titlear, :descriptionrus, :descriptioneng, :descriptionar, :category)
+		params.require(:amsstonepicture).permit(:titlerus, :titleeng, :titlear, :descriptionrus, :descriptioneng, :descriptionar, :imagestonepicture)
 	end
 
 	def find_amsstonepicture

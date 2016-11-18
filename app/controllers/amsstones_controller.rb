@@ -44,7 +44,7 @@ class AmsstonesController < ApplicationController
 	private
 
 	def amsstone_params
-		params.require(:amsstone).permit(:titlerus, :titleeng, :titlear, :number, :descriptionrus, :descriptioneng, :descriptionar, :category)
+		params.require(:amsstone).permit(:titlerus, :titleeng, :titlear, :number, :descriptionrus, :descriptioneng, :descriptionar, :category, :imagestone)
 	end
 
 	def find_amsstone

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161118022432) do
+ActiveRecord::Schema.define(version: 20161118042501) do
 
   create_table "amsfoodpictures", force: :cascade do |t|
     t.string   "titlerus"
@@ -21,8 +21,12 @@ ActiveRecord::Schema.define(version: 20161118022432) do
     t.text     "descriptioneng"
     t.text     "descriptionar"
     t.integer  "user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "imagefoodpicture_file_name"
+    t.string   "imagefoodpicture_content_type"
+    t.integer  "imagefoodpicture_file_size"
+    t.datetime "imagefoodpicture_updated_at"
   end
 
   create_table "amsfoods", force: :cascade do |t|
@@ -33,8 +37,12 @@ ActiveRecord::Schema.define(version: 20161118022432) do
     t.text     "descriptioneng"
     t.text     "descriptionar"
     t.integer  "user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "imagefood_file_name"
+    t.string   "imagefood_content_type"
+    t.integer  "imagefood_file_size"
+    t.datetime "imagefood_updated_at"
   end
 
   create_table "amsgrouppictures", force: :cascade do |t|
@@ -45,8 +53,12 @@ ActiveRecord::Schema.define(version: 20161118022432) do
     t.text     "descriptioneng"
     t.text     "descriptionar"
     t.integer  "user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "imagegrouppicture_file_name"
+    t.string   "imagegrouppicture_content_type"
+    t.integer  "imagegrouppicture_file_size"
+    t.datetime "imagegrouppicture_updated_at"
   end
 
   create_table "amsgroups", force: :cascade do |t|
@@ -57,8 +69,12 @@ ActiveRecord::Schema.define(version: 20161118022432) do
     t.text     "descriptioneng"
     t.text     "descriptionar"
     t.integer  "user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "imagegroup_file_name"
+    t.string   "imagegroup_content_type"
+    t.integer  "imagegroup_file_size"
+    t.datetime "imagegroup_updated_at"
   end
 
   create_table "amsnovosts", force: :cascade do |t|
@@ -81,8 +97,12 @@ ActiveRecord::Schema.define(version: 20161118022432) do
     t.text     "descriptioneng"
     t.text     "descriptionar"
     t.integer  "user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "imagestonepicture_file_name"
+    t.string   "imagestonepicture_content_type"
+    t.integer  "imagestonepicture_file_size"
+    t.datetime "imagestonepicture_updated_at"
   end
 
   create_table "amsstones", force: :cascade do |t|
@@ -95,8 +115,12 @@ ActiveRecord::Schema.define(version: 20161118022432) do
     t.text     "descriptionar"
     t.integer  "category"
     t.integer  "user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "imagestone_file_name"
+    t.string   "imagestone_content_type"
+    t.integer  "imagestone_file_size"
+    t.datetime "imagestone_updated_at"
   end
 
 end

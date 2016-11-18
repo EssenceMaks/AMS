@@ -44,7 +44,7 @@ class AmsgrouppicturesController < ApplicationController
 	private
 
 	def amsgrouppicture_params
-		params.require(:amsgrouppicture).permit(:titlerus, :titleeng, :titlear, :descriptionrus, :descriptioneng, :descriptionar, :category)
+		params.require(:amsgrouppicture).permit(:titlerus, :titleeng, :titlear, :descriptionrus, :descriptioneng, :descriptionar, :imagegrouppicture)
 	end
 
 	def find_amsgrouppicture

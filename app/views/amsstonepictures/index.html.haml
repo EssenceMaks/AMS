@@ -14,32 +14,13 @@
           .col-xs-7.col-md-7
             %div.slides.inline
               %ul
-                %li
-                  =image_tag( '2.jpg', :class => 'foto_slider_group' )
-                  %div 
-                    - @amsstonepicture.each do |stonepicture|
-                      %h2= link_to stonepicture.titlerus, stonepicture
-                %li
-                  =image_tag( '8.jpg', :class => 'foto_slider_group' )
-                  %div 
-                    - @amsstonepicture.each do |stonepicture|
-                      %h2= link_to stonepicture.titlerus, stonepicture
-                %li
-                  =image_tag( '4.jpg', :class => 'foto_slider_group' )
-                  %div 
-                    - @amsstonepicture.each do |stonepicture|
-                      %h2= link_to stonepicture.titlerus, stonepicture
-                %li
-                  =image_tag( '6.jpg', :class => 'foto_slider_group' )
-                  %div 
-                    - @amsstonepicture.each do |stonepicture|
-                      %h2= link_to stonepicture.titlerus, stonepicture
-                %li
-                  =image_tag( '1.jpg', :class => 'foto_slider_group' )
-                  %div 
-                    - @amsstonepicture.each do |stonepicture|
-                      %h2= link_to stonepicture.titlerus, stonepicture
-
+                - @amsstonepicture.each_slice(1) do |stonepicture|
+                  - stonepicture.each do  |s|
+                    %li
+                      = link_to s do
+                        = image_tag s.imagestonepicture.url(:medium)
+                      %div 
+                        %h2= link_to s.titlerus, s
       %div.groupcontact.inline
         %li.contact 
           = link_to image_tag( 'google-plus-3-512.png', :class => 'contacts_to_group' ), amsgroups_path, target: '_blank'

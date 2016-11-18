@@ -1,9 +1,10 @@
 %h1 this is the face of user, like a person status
+= image_tag @amsfoodpicture.imagefoodpicture.url(:medium, class: "ams_gallery_foto")
 %h2= @amsfoodpicture.titlerus
 %br
 %h3= @amsfoodpicture.descriptionrus
 %br
 
 = link_to "Back", amsfoodpictures_path, class: "btn btn-default"
-= link_to "Edit", edit_foodpicture_path, class: "btn btn-default"
+= link_to "Edit", edit_amsfoodpicture_path, class: "btn btn-default"
 = link_to "delete", amsfoodpicture_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"

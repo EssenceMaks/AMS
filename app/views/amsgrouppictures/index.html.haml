@@ -25,7 +25,13 @@
           = link_to image_tag( 'skype-3-512.png', :class => 'contacts_to_group' ), amsgroups_path, target: '_blank'
 
 %div.formargin
-  
+  - @amsgrouppicture.each_slice(3) do |grouppicture|
+    %div
+      - grouppicture.each do  |s|
+        .ams_gallery_foto
+          = link_to s do
+            = image_tag s.imagegrouppicture.url(:medium)
+        %h2= link_to s.titlerus, s
 
 
            
