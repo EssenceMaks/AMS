@@ -1,0 +1,31 @@
+!!! 5
+%html
+%head
+  %title AMS
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+
+%body
+  - if user_signed_in?
+    %nav.navbar.navbar-default
+      .conteiner
+        .navbar-brand= link_to "Административная панель", root_path
+        %ul.nav.navbar-nav
+          %li= link_to "Создать Фото AMS", new_amsgrouppicture_path, class: "btn btn-default" 
+          %li= link_to "Создать Новость AMS", new_amsgroup_path, class: "btn btn-default"
+          %li= link_to "Создать Фото AMS Stone", new_amsstonepicture_path, class: "btn btn-default"
+          %li= link_to "Создать Товар AMS Stone", new_amsstone_path, class: "btn btn-default"
+          %li= link_to "Создать Фото AMS Food", new_amsfoodpicture_path, class: "btn btn-default"
+          %li= link_to "Создать Товар AMS Food", new_amsfood_path, class: "btn btn-default"
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to "Выйти", destroy_user_session_path, method: :delete
+  - else
+    %div.sign= link_to "Enter", new_user_session_path
+
+
+
+  = yield
+  .msg
+    - flash.each do |name, msg|
+      = content_tag :div, msg, class: "alert"
