@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161118093848) do
+ActiveRecord::Schema.define(version: 20161120090158) do
+
+  create_table "amsfood_translations", force: :cascade do |t|
+    t.integer  "amsfood_id",     null: false
+    t.string   "locale",         null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "titlerus"
+    t.text     "descriptionrus"
+  end
+
+  add_index "amsfood_translations", ["amsfood_id"], name: "index_amsfood_translations_on_amsfood_id"
+  add_index "amsfood_translations", ["locale"], name: "index_amsfood_translations_on_locale"
+
+  create_table "amsfoodpicture_translations", force: :cascade do |t|
+    t.integer  "amsfoodpicture_id", null: false
+    t.string   "locale",            null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "titlerus"
+    t.text     "descriptionrus"
+  end
+
+  add_index "amsfoodpicture_translations", ["amsfoodpicture_id"], name: "index_amsfoodpicture_translations_on_amsfoodpicture_id"
+  add_index "amsfoodpicture_translations", ["locale"], name: "index_amsfoodpicture_translations_on_locale"
 
   create_table "amsfoodpictures", force: :cascade do |t|
     t.string   "titlerus"
@@ -44,6 +68,30 @@ ActiveRecord::Schema.define(version: 20161118093848) do
     t.integer  "imagefood_file_size"
     t.datetime "imagefood_updated_at"
   end
+
+  create_table "amsgroup_translations", force: :cascade do |t|
+    t.integer  "amsgroup_id",    null: false
+    t.string   "locale",         null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "titlerus"
+    t.text     "descriptionrus"
+  end
+
+  add_index "amsgroup_translations", ["amsgroup_id"], name: "index_amsgroup_translations_on_amsgroup_id"
+  add_index "amsgroup_translations", ["locale"], name: "index_amsgroup_translations_on_locale"
+
+  create_table "amsgrouppicture_translations", force: :cascade do |t|
+    t.integer  "amsgrouppicture_id", null: false
+    t.string   "locale",             null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "titlerus"
+    t.text     "descriptionrus"
+  end
+
+  add_index "amsgrouppicture_translations", ["amsgrouppicture_id"], name: "index_amsgrouppicture_translations_on_amsgrouppicture_id"
+  add_index "amsgrouppicture_translations", ["locale"], name: "index_amsgrouppicture_translations_on_locale"
 
   create_table "amsgrouppictures", force: :cascade do |t|
     t.string   "titlerus"
@@ -88,6 +136,30 @@ ActiveRecord::Schema.define(version: 20161118093848) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
+
+  create_table "amsstone_translations", force: :cascade do |t|
+    t.integer  "amsstone_id",    null: false
+    t.string   "locale",         null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "titlerus"
+    t.text     "descriptionrus"
+  end
+
+  add_index "amsstone_translations", ["amsstone_id"], name: "index_amsstone_translations_on_amsstone_id"
+  add_index "amsstone_translations", ["locale"], name: "index_amsstone_translations_on_locale"
+
+  create_table "amsstonepicture_translations", force: :cascade do |t|
+    t.integer  "amsstonepicture_id", null: false
+    t.string   "locale",             null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "titlerus"
+    t.text     "descriptionrus"
+  end
+
+  add_index "amsstonepicture_translations", ["amsstonepicture_id"], name: "index_amsstonepicture_translations_on_amsstonepicture_id"
+  add_index "amsstonepicture_translations", ["locale"], name: "index_amsstonepicture_translations_on_locale"
 
   create_table "amsstonepictures", force: :cascade do |t|
     t.string   "titlerus"
