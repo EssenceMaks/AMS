@@ -5,17 +5,20 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'amsgroups#index'
-
-  #get 'amsgroups/index'
+  
+  scope "/:locale", locale: /en|ru|ar/ do
+    
+        end
+                                  #get 'amsgroups/index'
       resources :amsgroups
       resources :amsgrouppictures
-
-  #get 'amsfoods/index'
+                                  #get 'amsfoods/index'
       resources :amsfoods
       resources :amsfoodpictures
-  #get 'amsstones/index'
+                                  #get 'amsstones/index'
       resources :amsstones
       resources :amsstonepictures
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
