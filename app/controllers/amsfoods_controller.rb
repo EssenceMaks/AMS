@@ -45,7 +45,7 @@ class AmsfoodsController < ApplicationController
 	private
 
 	def amsfood_params
-		params.require(:amsfood).permit(:titlerus, :titleeng, :titlear, :descriptionrus, :descriptioneng, :descriptionar, :imagefood)
+		params.require(:amsfood).permit(:titlerus, :descriptionrus, :imagefood)
 	end
 
 	def find_amsfood
