@@ -39,11 +39,7 @@ ActiveRecord::Schema.define(version: 20161120090158) do
 
   create_table "amsfoodpictures", force: :cascade do |t|
     t.string   "titlerus"
-    t.string   "titleeng"
-    t.string   "titlear"
     t.text     "descriptionrus"
-    t.text     "descriptioneng"
-    t.text     "descriptionar"
     t.integer  "user_id"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
@@ -55,11 +51,7 @@ ActiveRecord::Schema.define(version: 20161120090158) do
 
   create_table "amsfoods", force: :cascade do |t|
     t.string   "titlerus"
-    t.string   "titleeng"
-    t.string   "titlear"
     t.text     "descriptionrus"
-    t.text     "descriptioneng"
-    t.text     "descriptionar"
     t.integer  "user_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
@@ -95,11 +87,7 @@ ActiveRecord::Schema.define(version: 20161120090158) do
 
   create_table "amsgrouppictures", force: :cascade do |t|
     t.string   "titlerus"
-    t.string   "titleeng"
-    t.string   "titlear"
     t.text     "descriptionrus"
-    t.text     "descriptioneng"
-    t.text     "descriptionar"
     t.integer  "user_id"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
@@ -111,11 +99,7 @@ ActiveRecord::Schema.define(version: 20161120090158) do
 
   create_table "amsgroups", force: :cascade do |t|
     t.string   "titlerus"
-    t.string   "titleeng"
-    t.string   "titlear"
     t.text     "descriptionrus"
-    t.text     "descriptioneng"
-    t.text     "descriptionar"
     t.integer  "user_id"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
@@ -123,18 +107,6 @@ ActiveRecord::Schema.define(version: 20161120090158) do
     t.string   "imagegroup_content_type"
     t.integer  "imagegroup_file_size"
     t.datetime "imagegroup_updated_at"
-  end
-
-  create_table "amsnovosts", force: :cascade do |t|
-    t.string   "titlerus"
-    t.string   "titleeng"
-    t.string   "titlear"
-    t.text     "descriptionrus"
-    t.text     "descriptioneng"
-    t.text     "descriptionar"
-    t.integer  "user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
   end
 
   create_table "amsstone_translations", force: :cascade do |t|
@@ -163,11 +135,7 @@ ActiveRecord::Schema.define(version: 20161120090158) do
 
   create_table "amsstonepictures", force: :cascade do |t|
     t.string   "titlerus"
-    t.string   "titleeng"
-    t.string   "titlear"
     t.text     "descriptionrus"
-    t.text     "descriptioneng"
-    t.text     "descriptionar"
     t.integer  "user_id"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
@@ -179,12 +147,8 @@ ActiveRecord::Schema.define(version: 20161120090158) do
 
   create_table "amsstones", force: :cascade do |t|
     t.string   "titlerus"
-    t.string   "titleeng"
-    t.string   "titlear"
     t.string   "number"
     t.text     "descriptionrus"
-    t.text     "descriptioneng"
-    t.text     "descriptionar"
     t.integer  "category"
     t.integer  "user_id"
     t.datetime "created_at",              null: false
