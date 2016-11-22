@@ -6,14 +6,13 @@
 
     %h3
       = link_to_unless_current "English",  amsgroups_path(locale: "en"),class: "welcomelanguge"
-      \#{link_to_unless_current "Arabic",  amsgroups_path(locale: "ru"),class: "welcomelanguge"} |
-      \#{link_to_unless_current "Rusian",  amsgroups_path(locale: "ar"),class: "welcomelanguge"}
+      \#{link_to_unless_current "Arabic",  amsgroups_path(locale: "ar"),class: "welcomelanguge"} |
+      \#{link_to_unless_current "Rusian",  amsgroups_path(locale: "ru"),class: "welcomelanguge"}
     %br
     %br
     %br
     %br
     %br
-    
     .welcome_contacts
       %li.inline.left
         = link_to image_tag( 'facebook-square.svg', :class => 'wel_contact' ), amsgroups_path, target: '_blank'
