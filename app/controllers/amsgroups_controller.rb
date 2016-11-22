@@ -1,6 +1,10 @@
 class AmsgroupsController < ApplicationController
 	before_action :find_amsgroup, only: [ :show, :edit, :update, :destroy]
-	before_action :authenticate_user!, except: [:index, :show]
+	before_action :authenticate_user!, except: [:index, :show, :welcome]
+
+	def welcome
+		
+	end
 
 
 	def index

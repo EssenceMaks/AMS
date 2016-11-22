@@ -19,9 +19,14 @@
 
 
 body {
-  background-image: url('points2.png');
+  background-image: url('points.png');
   font: 1em 'PT Sans', sans-serif;
   font-family: "futura-pt"; 
   font-family: "proxima-nova"; 
-  color: #EBCB79;   /*#1a0120*/
+  color: gold;   /*#1a0120*/
 }
+
+.background {
+	background-image: url('points2.png');
+}
+
