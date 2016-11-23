@@ -33,14 +33,14 @@
     vertical-align: middle;
 
     border-radius: 6px;
-    color: gold;
+    color: #ffd700;
     background-color: #50156E;
-    border-color: gold;
+    border-color: #ffd700;
 
 	touch-action: manipulation;
     cursor: pointer;
 
-    border: 4px double gold;
+    border: 4px double #ffd700;
     white-space: nowrap;
     line-height: 1.42857143;
     border-radius: 4px;
@@ -58,7 +58,7 @@
 
 .welcomelanguge:hover {
 	color: #50156E;
-	background: gold;
+	background: #ffd700;
 	font-weight: bold;
 	font-size: 20px;
 	border: 4px double #50156E;

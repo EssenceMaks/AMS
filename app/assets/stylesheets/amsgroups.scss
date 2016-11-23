@@ -21,6 +21,9 @@ label {
   background-color: #F87911;
 }
 
+.inline {
+  display: inline-block;
+}
 /* HEADER begin*/
 
 .amslogo {
@@ -53,7 +56,7 @@ label {
   color: #ffd700;
   line-height: 0.9;
   float: right;
-  padding: 15px 20px;
+  padding: 15px 10px;
   margin-right: 0px;
   margin-left: 5px;
   border-left: 4px double #ffd700;
@@ -438,11 +441,6 @@ label {
   border-radius: 6px;
 }
 
-.amsmap{
-  width: 900px;
-  height: 420px;
-  margin: 5px auto;
-}
 
 /* Слайдер */
 
@@ -704,6 +702,69 @@ label {
       }
 
 
+/* CONTACTS*/ 
+.ams_contacts  {
+  width: 450px;
+  color: #ffd700;
+}
+  .left{
+    float: left;
+    
+  }
+  .right{
+    float: right;
+  }
+    .wel_contact {
+      width: 40px;
+        height: 40px;
+        margin: 5px 2px;
+    }
+    .wel_contact:hover {
+      background-color: #50156E;
+      border: 4px solid #50156E;
+      text-decoration: none;
+    }
+    .mail{
+        height: 40px;
+        width: auto;
+        margin: 5px 2px;
+    }
+    .mail:hover {
+      background-color: #50156E;
+      border: 4px solid #50156E;
+      text-decoration: none;
+    }
+
+    .vline{
+     border-left: 4px solid #50156E;
+    }
+
+.ams_contacts {
+  font-size: 20px;
+  margin: 15px 5px;
+}
+
+.ams_contacts li {
+  list-style-type: none;
+}
+
+.ams_contacts h2, h3 {
+  text-align: center;
+}
+
+
+.number{
+  font-size: 20px;
+  margin: 15px 5px;
+  display: inline-block;
+}
+
+.amsmap{
+  width: 450px;
+  height: 350px;
+  margin: 5px auto;
+}
+
 
 /* HEADER #361c65*/ 
 
@@ -715,9 +776,7 @@ label {
       background-image: url('points2.png');
     }
 
-    .inline {
-      display: inline-block;
-    }
+
 
     .grouphead {
       width: 900px;
