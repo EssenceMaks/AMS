@@ -9,6 +9,11 @@ class AmsgroupsController < ApplicationController
 
 	def index
 		@amsgroup = Amsgroup.all.order("created_at DESC")
+			@amsgrouppicture = Amsgrouppicture.all.order("created_at DESC")
+		@amsstone = Amsstone.all.order("created_at DESC")
+			@amsstonepicture = Amsstonepicture.all.order("created_at DESC")
+		@amsfood = Amsfood.all.order("created_at DESC")
+			@amsfoodpicture = Amsfoodpicture.all.order("created_at DESC")
 	end
 
 	def show

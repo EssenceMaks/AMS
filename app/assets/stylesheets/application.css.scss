@@ -19,12 +19,24 @@
 
 
 body {
-  background-image: url('points.png');
+  /*background-image: url('wall_gold.png');*/
+  background-color: black;
   font: 1em 'PT Sans', sans-serif;
   font-family: "futura-pt"; 
   font-family: "proxima-nova"; 
-  color: gold;   /*#1a0120*/
+  color: #ffd700;   /*#1a0120*/
 }
+
+
+    .bodyams {
+      width: 900px;
+      height: 200px;
+      margin: 0px auto;
+    }
+    .bodyhead {
+    	width: 900px;
+    	margin: 0px auto;
+    }
 
 .background {
 	background-image: url('points2.png');
