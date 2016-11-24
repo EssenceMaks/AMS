@@ -20,10 +20,16 @@
               - @amsgrouppicture.each_slice(1) do |grouppicture|
                 - grouppicture.each do  |s|
                   %li
-                    = link_to s do
+                    - if user_signed_in?
+                      = link_to s do
+                        = image_tag s.imagegrouppicture.url(:medium)
+                    - else
                       = image_tag s.imagegrouppicture.url(:medium)
                     %div 
-                      = link_to s.titlerus, s
+                      - if user_signed_in?
+                        = link_to s.titlerus, s
+                      - else
+                        = s.titlerus
                       /
                         = link_to image_tag( 'job.gif', :class => 'ams_video' ), amsgroups_path, target: '_blank'    
           %div.amsgroup_maintext   
@@ -33,45 +39,56 @@
             %p=t 'welcome.paragraph'
         %div 
           %div.amsworktext
-            %h2=t 'welcome.title'
-            %p=t 'welcome.paragraph' 
-          %div.amsworkpartners.inline
-            - @amsgroup.each do |group|
-              %h2
-                = link_to group.titlerus, group
-                = link_to group.descriptionrus, group
-          %div.amsgroupfoodandstone
-            .col-xs-6.col-md-6
-              %div.amsgroupfood
-                %div.amsgroupfshead.amsgroupfsheadgrey= link_to "AMS Stones", amsstones_path, class: " btn asmstone_button"
-                %div.amsgroupfsbody
-                  %div.slides_fs
-                    %ul
-                      - @amsstonepicture.each_slice(1) do |stonepicture|
-                        - stonepicture.each do  |st_pic|
-                          %li
-                            = link_to image_tag( st_pic.imagestonepicture.url, :class => 'medium' ) 
-                            %div 
-                              - if user_signed_in?
-                                %h2= link_to st_pic.titlerus, st_pic
-                              -else
-                                %h2= st_pic.titlerus
 
-            .col-xs-6.col-md-6
-              %div.amsgroupfood
-                %div.amsgroupfshead.amsgroupfsheadred= link_to "AMS Foods", amsfoods_path, class: " btn asmfood_button"
-                %div.amsgroupfsbody
-                  %div.slides_fs
-                    %ul
-                      - @amsfoodpicture.each_slice(1) do |foodpicture|
-                        - foodpicture.each do  |fo_pic|
-                          %li
-                            = link_to image_tag( fo_pic.imagefoodpicture.url, :class => 'medium' ) 
-                            %div 
-                              - if user_signed_in?
-                                %h2= link_to fo_pic.titlerus, fo_pic
-                              -else
-                                %h2= fo_pic.titlerus
+            %div.amsworknews.right
+              %h1{:style => "color: #ffd700; text-align: center"} OUR NEWS
+              - @amsgroup.each do |group|
+                %h2
+                  - if user_signed_in?
+                    = link_to group.titlerus, group
+                  - else
+                    = group.titlerus
+                  .newstime.right
+                    %h5
+                      = group.updated_at.day
+                      ∕
+                      = group.updated_at.month
+                      ∕
+                      = group.updated_at.year
+                %h4{:style => "color: #ffd700;"}= group.descriptionrus
+                %hr{:style => "border: 2px double #50156E; margin-top: 10px;"}
+            %h1{:style => "color: #ffd700; text-align: center; margin-top: 0px;"}=t 'welcome.howweworktitle'
+            %p=t 'welcome.howweworktext' 
+          %div.amsgroupfoodandstone
+            %div.amsgroupfoodandstoneplate.inline
+              %div.amsgroupfshead.amsgroupfsheadgrey= link_to "AMS Stones", amsstones_path, class: " btn asmstone_button"
+              %div.amsgroupfsbody
+                %div.slides_fs
+                  %ul
+                    - @amsstonepicture.each_slice(1) do |stonepicture|
+                      - stonepicture.each do  |st_pic|
+                        %li
+                          = link_to image_tag( st_pic.imagestonepicture.url, :class => 'thumb' ) 
+                          %div 
+                            - if user_signed_in?
+                              %h2= link_to st_pic.titlerus, st_pic
+                            -else
+                              %h2= st_pic.titlerus
+
+            %div.amsgroupfoodandstoneplate.inline
+              %div.amsgroupfshead.amsgroupfsheadred= link_to "AMS Foods", amsfoods_path, class: " btn asmfood_button"
+              %div.amsgroupfsbody
+                %div.slides_fs
+                  %ul
+                    - @amsfoodpicture.each_slice(1) do |foodpicture|
+                      - foodpicture.each do  |fo_pic|
+                        %li
+                          = link_to image_tag( fo_pic.imagefoodpicture.url, :class => 'thumb' ) 
+                          %div 
+                            - if user_signed_in?
+                              %h2= link_to fo_pic.titlerus, fo_pic
+                            -else
+                              %h2= fo_pic.titlerus
         %div.amsgroupproduction
           %div.stone_gallery
             - @amsgroup.each_slice(3) do |group|

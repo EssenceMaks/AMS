@@ -352,6 +352,303 @@ label {
           margin: 0px;
       }
 
+/* КАК МЫ РАБОТАЕМ Begin */
+
+.amsworktext{
+  margin: 20px 20px;
+  font-size: 20px;
+  font-family: 'PT Sans';
+  padding: 5px 15px;
+  line-height: 0.8;
+
+}
+.amsworknews h2, h4, a{
+  color: #ffd700;
+}
+
+
+.amsworknews hr, h5{
+  color: #50156E;
+}
+
+.hrnews {
+  color: #50156E;
+}
+
+.amsworknews{
+  width: 400px;
+  height: 400px;
+  overflow-y: auto;
+  margin: 0px auto;
+  padding: 5px;
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-top: -20px;
+  border-left: 5px solid #50156E;
+} 
+
+.amsgroupfoodandstone {
+  width: 820px;
+  margin: 10px 25px;
+}
+
+.amsgroupfoodandstoneplate {
+  width: 388px;
+  margin: 5px 10px;
+  border-left: 3px double #ffd700;
+  border-right: 3px double #ffd700;
+}
+
+    .amsgroupfshead{
+      height: 50px;
+      width: 382px;
+
+      background-image: url('plate.png');
+      text-align: center;
+      font-size: 50px;
+      border-bottom: 2px solid #ffd700;
+    /*border-left: 2px solid #ffd700;
+      border-right: 2px solid #ffd700;*/
+    }
+          .amsgroupfsheadred{
+              background-color: #fb1b36;
+          }
+          .amsgroupfsheadgrey{
+              background-color: grey;
+          }
+    .amsgroupfshead .btn {
+      font-size: 30px;
+      color: #ffd700;
+      width: 388px
+    }
+
+    .amsgroupfsheadfood{
+      
+    }
+    .amsgroupfsbody{
+      height: 300px;
+      width: 388px;
+    }
+
+                  /* Слайдер */
+
+                  .picture_ams_groupfs{
+                    height: 300px;
+                    width: 388px;
+                    margin-left: -40px;
+                    border-radius: 0px 0px 3px 3px;
+                    border-left: 2px solid #ffd700;
+                    border-right: 2px solid #ffd700;
+                  }
+
+                  .slides_fs {
+                      height: 300px;
+                      margin: 0px 0px;
+                      overflow: hidden;
+                      position: relative;
+                      width: 382px;
+                      border-radius: 0px 0px 3px 3px;
+                  }
+
+                  .slides_fs ul {
+                      list-style:none;
+                      position:relative;
+
+                  }
+
+                   
+
+                  /* Кадры анимации #anim_slides */
+
+                  @-webkit-keyframes anim_slides {
+                      0% {
+                          opacity:0;
+                      }
+                      6% {
+                          opacity:1;
+                      }
+                      24% {
+                          opacity:1;
+                      }
+                      30% {
+                          opacity:0;
+                      }
+                      100% {
+                          opacity:0;
+                      }
+                  }
+
+                  @-moz-keyframes anim_slides {
+                      0% {
+                          opacity:0;
+                      }
+                      6% {
+                          opacity:1;
+                      }
+                      24% {
+                          opacity:1;
+                      }
+                      30% {
+                          opacity:0;
+                      }
+                      100% {
+                          opacity:0;
+                      }
+                  } 
+
+                  .slides_fs ul li {
+                      opacity:0;
+                      position:absolute;
+                      margin-left: -40px;
+                      top:0;
+
+                      /* анимация css3 */
+                      -webkit-animation-name: anim_slides;
+                      -webkit-animation-duration: 24.0s;
+                      -webkit-animation-timing-function: linear;
+                      -webkit-animation-iteration-count: infinite;
+                      -webkit-animation-direction: normal;
+                      -webkit-animation-delay: 0;
+                      -webkit-animation-play-state: running;
+                      -webkit-animation-fill-mode: forwards;
+                   
+                      -moz-animation-name: anim_slides;
+                      -moz-animation-duration: 24.0s;
+                      -moz-animation-timing-function: linear;
+                      -moz-animation-iteration-count: infinite;
+                      -moz-animation-direction: normal;
+                      -moz-animation-delay: 0;
+                      -moz-animation-play-state: running;
+                      -moz-animation-fill-mode: forwards;
+                  }
+
+                   
+
+                  /* Задержки css3 */
+                  .slides_fs ul  li:nth-child(2), .slides_fs ul  li:nth-child(2) div {
+                      -webkit-animation-delay: 6.0s;
+                      -moz-animation-delay: 6.0s;
+                  }
+
+                  .slides_fs ul  li:nth-child(3), .slides_fs ul  li:nth-child(3) div {
+                      -webkit-animation-delay: 12.0s;
+                      -moz-animation-delay: 12.0s;
+                  }
+
+                  .slides_fs ul  li:nth-child(4), .slides_fs ul  li:nth-child(4) div {
+                      -webkit-animation-delay: 18.0s;
+                      -moz-animation-delay: 18.0s;
+                  }
+
+                  .slides_fs ul li img {
+                      display:block;
+
+                  }
+
+                   
+
+                  /* Кадры анимации #anim_titles */
+
+                  @-webkit-keyframes anim_titles {
+                      0% {
+                          left:100%;
+                          opacity:0;
+                      }
+
+                      5% {
+                          left:10%;
+                          opacity:1;
+                      }
+
+                      20% {
+                          left:10%;
+                          opacity:1;
+                      }
+
+                      25% {
+                          left:100%;
+                          opacity:0;
+                      }
+
+                      100% {
+                          left:100%;
+                          opacity:0;
+                      }
+                  }
+
+                  @-moz-keyframes anim_titles {
+                      0% {
+                          left:100%;
+                          opacity:0;
+                      }
+
+                      5% {
+                          left:10%;
+                          opacity:1;
+                      }
+
+                      20% {
+                          left:10%;
+                          opacity:1;
+                      }
+
+                      25% {
+                          left:100%;
+                          opacity:0;
+                      }
+
+                      100% {
+                          left:100%;
+                          opacity:0;
+                      }
+                  }
+
+                   
+
+                  .slides_fs ul li div {
+                      background-color: #50156E;
+                      border-radius:3px 3px 3px 3px;
+                      box-shadow:0 0 5px #EBCB79 none;
+                      color: #ffd700;
+                      font-size:26px;
+                      vertical-align: middle;
+                      left:10%;
+                      margin:0 auto;
+                      padding: 0px 10px;
+                      position:absolute;
+                      top: 260px;
+                      width: auto;
+                      height: 32px;
+
+
+                      /* Анимация css3 */
+
+                      -webkit-animation-name: anim_titles;
+
+                      -webkit-animation-duration: 24.0s;
+                      -webkit-animation-timing-function: linear;
+                      -webkit-animation-iteration-count: infinite;
+                      -webkit-animation-direction: normal;
+                      -webkit-animation-delay: 0;
+                      -webkit-animation-play-state: running;
+                      -webkit-animation-fill-mode: forwards;
+                   
+                      -moz-animation-name: anim_titles;
+                      -moz-animation-duration: 24.0s;
+                      -moz-animation-timing-function: linear;
+                      -moz-animation-iteration-count: infinite;
+                      -moz-animation-direction: normal;
+                      -moz-animation-delay: 0;
+                      -moz-animation-play-state: running;
+                      -moz-animation-fill-mode: forwards;
+                  }
+
+                  .slides_fs h2 {
+                    margin-top: -0px;
+                  }
+
+/* КАК МЫ РАБОТАЕМ END*/
+
 @media screen and (max-width: 700px) {
   .tabbed { width: 400px }
   .tabbed > label { display: none }
@@ -383,27 +680,13 @@ label {
   height: 300px;
 
 }
-.amsworktext{
-  margin: 20px 20px;
-  font-size: 20px;
-  font-family: 'PT Sans';
-  padding: 5px 15px;
-}
-.amsworktext h2{
-  font-size: 40px;
-  text-align: center;
-}
-.amsworkpartners{
-  width: 900px;
-  margin: 10px auto;
 
-}
 .ams_partners_foto{
   width: 350px;
   height: 200px;
   margin: 10px;
-  border-left: 2px solid #fee258;
-  border-right: 2px solid #fee258;
+  border-left: 2px solid #ffd700;
+  border-right: 2px solid #ffd700;
 }
 .amsworkpartners h2{
   width: 350px;
@@ -411,8 +694,8 @@ label {
   margin-bottom: 20px;
   font-size: 40px;
   text-align: center;
-  border-left: 2px solid #fee258;
-  border-right: 2px solid #fee258;
+  border-left: 2px solid #ffd700;
+  border-right: 2px solid #ffd700;
 
 }
 
@@ -448,258 +731,13 @@ label {
   width: 631px;
   height: 185px;
   border-radius: 3px 3px 3px 3px;
-  border: 2px solid #fee258;
+  border: 2px solid #ffd700;
 }
 .bootstile{
   margin-top: 47px;
 }
 
 
-
-
-.amsgroupfshead{
-  height: 50px;
-  width: 400px;
-
-  background-image: url('plate.png');
-  text-align: center;
-  font-size: 50px;
-  border-bottom: 2px solid #fee258;
-  border-left: 2px solid #fee258;
-  border-right: 2px solid #fee258;
-}
-      .amsgroupfsheadred{
-          background-color: #fb1b36;
-      }
-      .amsgroupfsheadgrey{
-          background-color: grey;
-      }
-.amsgroupfshead .btn {
-  font-size: 30px;
-  color: #fee258;
-  width: 400px
-}
-
-.amsgroupfsheadfood{
-  
-
-
-}
-.amsgroupfsbody{
-  height: 300px;
-  width: 400px;
-}
-
-      /* Слайдер */
-
-      .picture_ams_groupfs{
-        height: 300px;
-        width: 400px;
-        margin-left: -40px;
-        border-radius: 0px 0px 3px 3px;
-        border-left: 2px solid #fee258;
-        border-right: 2px solid #fee258;
-      }
-
-      .slides_fs {
-          height: 300px;
-          margin: 0px 0px;
-          overflow: hidden;
-          position: relative;
-          width: 400px;
-          border-radius: 0px 0px 3px 3px;
-      }
-
-      .slides_fs ul {
-          list-style:none;
-          position:relative;
-
-      }
-
-       
-
-      /* Кадры анимации #anim_slides */
-
-      @-webkit-keyframes anim_slides {
-          0% {
-              opacity:0;
-          }
-          6% {
-              opacity:1;
-          }
-          24% {
-              opacity:1;
-          }
-          30% {
-              opacity:0;
-          }
-          100% {
-              opacity:0;
-          }
-      }
-
-      @-moz-keyframes anim_slides {
-          0% {
-              opacity:0;
-          }
-          6% {
-              opacity:1;
-          }
-          24% {
-              opacity:1;
-          }
-          30% {
-              opacity:0;
-          }
-          100% {
-              opacity:0;
-          }
-      } 
-
-      .slides_fs ul li {
-          opacity:0;
-          position:absolute;
-          margin-left: -40px;
-          top:0;
-
-          /* анимация css3 */
-          -webkit-animation-name: anim_slides;
-          -webkit-animation-duration: 24.0s;
-          -webkit-animation-timing-function: linear;
-          -webkit-animation-iteration-count: infinite;
-          -webkit-animation-direction: normal;
-          -webkit-animation-delay: 0;
-          -webkit-animation-play-state: running;
-          -webkit-animation-fill-mode: forwards;
-       
-          -moz-animation-name: anim_slides;
-          -moz-animation-duration: 24.0s;
-          -moz-animation-timing-function: linear;
-          -moz-animation-iteration-count: infinite;
-          -moz-animation-direction: normal;
-          -moz-animation-delay: 0;
-          -moz-animation-play-state: running;
-          -moz-animation-fill-mode: forwards;
-      }
-
-       
-
-      /* Задержки css3 */
-      .slides_fs ul  li:nth-child(2), .slides_fs ul  li:nth-child(2) div {
-          -webkit-animation-delay: 6.0s;
-          -moz-animation-delay: 6.0s;
-      }
-
-      .slides_fs ul  li:nth-child(3), .slides_fs ul  li:nth-child(3) div {
-          -webkit-animation-delay: 12.0s;
-          -moz-animation-delay: 12.0s;
-      }
-
-      .slides_fs ul  li:nth-child(4), .slides_fs ul  li:nth-child(4) div {
-          -webkit-animation-delay: 18.0s;
-          -moz-animation-delay: 18.0s;
-      }
-
-      .slides_fs ul li img {
-          display:block;
-
-      }
-
-       
-
-      /* Кадры анимации #anim_titles */
-
-      @-webkit-keyframes anim_titles {
-          0% {
-              left:100%;
-              opacity:0;
-          }
-
-          5% {
-              left:10%;
-              opacity:1;
-          }
-
-          20% {
-              left:10%;
-              opacity:1;
-          }
-
-          25% {
-              left:100%;
-              opacity:0;
-          }
-
-          100% {
-              left:100%;
-              opacity:0;
-          }
-      }
-
-      @-moz-keyframes anim_titles {
-          0% {
-              left:100%;
-              opacity:0;
-          }
-
-          5% {
-              left:10%;
-              opacity:1;
-          }
-
-          20% {
-              left:10%;
-              opacity:1;
-          }
-
-          25% {
-              left:100%;
-              opacity:0;
-          }
-
-          100% {
-              left:100%;
-              opacity:0;
-          }
-      }
-
-       
-
-      .slides_fs ul li div {
-          background-color:#381D68;
-          border-radius:3px 3px 3px 3px;
-          box-shadow:0 0 5px #EBCB79 none;
-          color: #EBCB79;
-          font-size:26px;
-          left:10%;
-          margin:0 auto;
-          padding:10px;
-          position:absolute;
-          top: 120px;
-          width: auto;
-
-
-          /* Анимация css3 */
-
-          -webkit-animation-name: anim_titles;
-
-          -webkit-animation-duration: 24.0s;
-          -webkit-animation-timing-function: linear;
-          -webkit-animation-iteration-count: infinite;
-          -webkit-animation-direction: normal;
-          -webkit-animation-delay: 0;
-          -webkit-animation-play-state: running;
-          -webkit-animation-fill-mode: forwards;
-       
-          -moz-animation-name: anim_titles;
-          -moz-animation-duration: 24.0s;
-          -moz-animation-timing-function: linear;
-          -moz-animation-iteration-count: infinite;
-          -moz-animation-direction: normal;
-          -moz-animation-delay: 0;
-          -moz-animation-play-state: running;
-          -moz-animation-fill-mode: forwards;
-      }
 
 
 /* CONTACTS*/ 
@@ -784,7 +822,7 @@ label {
       background-color: #381D68;  /* #5b0d91 */
       height: 200px;
       background-image: url('plate.png');
-      border: 3px solid #fee258;
+      border: 3px solid #ffd700;
       border-radius: 3px;
     }
 
@@ -802,10 +840,10 @@ label {
           border-radius: 6px 0px 0px 6px;
           list-style-type: none;
           margin-left: 40px;
-          border-left: 1px solid #fee258;
-          border-bottom: 1px solid #fee258;
-          border-top: 1px solid #fee258;
-          color: #fee258;
+          border-left: 1px solid #ffd700;
+          border-bottom: 1px solid #ffd700;
+          border-top: 1px solid #ffd700;
+          color: #ffd700;
 
         }
 
