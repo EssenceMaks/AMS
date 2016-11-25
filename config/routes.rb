@@ -22,6 +22,8 @@ Rails.application.routes.draw do
       resources :amsstones
       resources :amsstonepictures
 
+      resources :categories
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

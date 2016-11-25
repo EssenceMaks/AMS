@@ -1,11 +1,8 @@
 .bodyams
-  %h1 Эдиница Товара AMS Stone
-  = image_tag @amsstone.imagestone.url(:medium, class: "ams_gallery_foto")
-  %h2= @amsstone.titlerus
+  %h1 ЭТО КАТЕГОРИЯ
+  %h2= @category.categoryname
   %br
-  %h3= @amsstone.descriptionrus
-  %br
-
+  
   = link_to "Back", amsstones_path, class: "btn btn-default"
   - if user_signed_in?
     = link_to "Edit", edit_amsstone_path, class: "btn btn-default"

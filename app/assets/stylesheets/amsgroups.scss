@@ -70,11 +70,13 @@ label {
   background: none; /* #5b0d91 */
   /*background-image: url('plate.png');*/
   background: #ffd700;
+  background-image: url('plate.png');
   font-weight: bold;
   border: 4px double #50156E;
   color: #50156E;
     text-align: center;
     vertical-align: middle;
+
 }
 
 /* HEADER end*/
@@ -94,6 +96,7 @@ label {
     border-right: 4px double #ffd700;
 
   padding: 10px;
+  margin-bottom: 20px;
   line-height: 1.4em;
   opacity: 0;
   transform: rotateX(-20deg);

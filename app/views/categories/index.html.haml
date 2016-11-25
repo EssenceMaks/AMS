@@ -73,17 +73,14 @@
       %h2 главная
       %p Компания <strong>AMS Internatioanl</strong> предоставляет услуги доставки\заказа материала и изделий из гранита, а так же предоставляет отдельные услуги грузодоставки подобных материалов между объектами, по Украине и странам Евросоюза. Более детальную информацию о материалах, их цене и контакты Вы можете найти в соответствующих разделах сайта.
 
-      %div.stone_gallery
-        - Category.all.each do |category|
-          = category.categoryname
-          - category.amsstones.each_slice(3) do |stone|
-            %div
-              - stone.each do  |s|
-                .ams_gallery_foto
-                  = link_to s do
-                    = image_tag s.imagestone.url(:medium)
-                %h2= link_to s.titlerus, s
+      
 
     %div
       %h2 главная
       %p Компания <strong>AMS Internatioanl</strong> предоставляет услуги доставки\заказа материала и изделий из гранита, а так же предоставляет отдельные услуги грузодоставки подобных материалов между объектами, по Украине и странам Евросоюза. Более детальную информацию о материалах, их цене и контакты Вы можете найти в соответствующих разделах сайта.
+      %div.stone_gallery
+        - @category.each_slice(3) do |cat|
+          %div
+            - cat.each do  |c|
+              .ams_gallery_foto
+                %h2= link_to c.categoryname, c

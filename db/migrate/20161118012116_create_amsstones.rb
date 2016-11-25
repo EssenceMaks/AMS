@@ -4,7 +4,7 @@ class CreateAmsstones < ActiveRecord::Migration
       t.string :titlerus
       t.string :number
       t.text :descriptionrus
-      t.integer :category
+      t.integer :category_id
       t.integer :user_id
 
       t.timestamps null: false

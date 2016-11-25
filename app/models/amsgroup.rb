@@ -1,6 +1,7 @@
 class Amsgroup < ActiveRecord::Base
 
   belongs_to :user
+  belongs_to :category
 
 
 	  has_attached_file :imagegroup, styles: { medium: "302x252#", thumb: "100x100#" }, default_url: "/images/:style/points.png"

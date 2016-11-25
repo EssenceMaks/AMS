@@ -1,0 +1,24 @@
+.bodyams
+  .col-xs-1.col-md-1
+    .btn_back
+    = link_to "Back", root_path, class: "btn btn-default"
+  .col-xs-10.col-md-10
+    .tit_desc_img_block
+      %h1.colorgold  NEW STONE
+      = simple_form_for @category, html: { multipart: true } do |f|
+        - if @category.errors.any?
+          #errors
+            %p
+              = @category.errors.count
+              Prevented this category froms saving
+            %ul
+              - @category.errors.full_messages.each do |msg|
+                %li= msg
+        .panel-body
+          = f.input :categoryname, label: 'Имя Категории', input_html: { title: "ИМЯ КАТЕГОРИИ", class: 'form-control'}
+          
+        .sub_button
+          = f.button :submit, class: "btn btn-primary sub_button"
+        .btn_bottom_back
+          = link_to "Back", root_path, class: "btn btn-default btn_bottom_back"
+  .col-xs-1.col-md-1

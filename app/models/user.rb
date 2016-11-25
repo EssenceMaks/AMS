@@ -10,4 +10,5 @@ class User < ActiveRecord::Base
   has_many :amsgrouppictures
   has_many :amsstones
   has_many :amsstonepictures
+  has_many :categories
 end

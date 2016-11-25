@@ -1,4 +1,4 @@
-.currentResumeEditForm
+.bodyams
   .col-xs-1.col-md-1
     .btn_back
     = link_to "Back", root_path, class: "btn btn-default"
@@ -15,6 +15,7 @@
               - @amsstone.errors.full_messages.each do |msg|
                 %li= msg
         .panel-body
+          = f.collection_select :category_id, Category.all, :id, :categoryname, {promt: "Выберите Категорию", class: 'form-control'}
           = f.input :titlerus, label: 'resume Name', input_html: { title: "NAME of your resume", class: 'form-control'}
           
           = f.input :number, label: 'Link', input_html: { title: "NAME of your resume", class: 'form-control'}

@@ -8,12 +8,26 @@ class AmsgroupsController < ApplicationController
 
 
 	def index
-		@amsgroup = Amsgroup.all.order("created_at DESC")
+		#@amsgroup = Amsgroup.all.order("created_at DESC")
 			@amsgrouppicture = Amsgrouppicture.all.order("created_at DESC")
-		@amsstone = Amsstone.all.order("created_at DESC")
+		#@amsstone = Amsstone.all.order("created_at DESC")
 			@amsstonepicture = Amsstonepicture.all.order("created_at DESC")
-		@amsfood = Amsfood.all.order("created_at DESC")
+		#@amsfood = Amsfood.all.order("created_at DESC")
 			@amsfoodpicture = Amsfoodpicture.all.order("created_at DESC")
+		#@category = Category.all.order("created_at DESC")
+
+		if params[:category].blank?
+			@amsgroup = Amsgroup.all.order("created_at DESC")
+			@amsstone = Amsstone.all.order("created_at DESC")
+			@amsfood = Amsfood.all.order("created_at DESC")
+			@category = Category.all.order("created_at DESC")
+		else
+			@category_id = Category.find_by(categoryname: params[:category]).id
+			@amsgroup = Amsgroup.where(category_id: @category_id).order("created_at DESC")
+			@amsstone = Amsstone.where(category_id: @category_id).order("created_at DESC")
+			@amsfood = Amsfood.where(category_id: @category_id).order("created_at DESC")
+		end
+
 	end
 
 	def show
@@ -54,7 +68,7 @@ class AmsgroupsController < ApplicationController
 	private
 
 	def amsgroup_params
-		params.require(:amsgroup).permit(:titlerus, :descriptionrus, :imagegroup)
+		params.require(:amsgroup).permit(:titlerus, :descriptionrus, :category_id, :imagegroup)
 	end
 
 	def find_amsgroup
