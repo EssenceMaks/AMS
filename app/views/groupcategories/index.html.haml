@@ -1,0 +1,83 @@
+%div.stoneheadmain
+  %div.formargin
+    %div.stonehead
+      %div.stonelanguage.inline
+        %ul
+          %li.language EN
+          %li.language AR
+          %li.language RU 
+      %div.stonelogo.inline
+        .bootstile
+          .col-xs-5.col-md-5
+            
+          .col-xs-7.col-md-7
+            %div.slides.inline
+              %ul
+                %li
+                  =image_tag( '1.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p МРАМОРНЫЕ ИЗДЕЛИ
+                %li
+                  =image_tag( '2.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p ПЛИТКА ИЗ МРАМОРА
+                %li
+                  =image_tag( '8.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p МРАМОР ТЁМНЫЙ
+                %li
+                  =image_tag( '4.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p МРАМОР БЕЛЫЙ
+                %li
+                  =image_tag( '6.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p МРАМОР МРАМОРНЫЙ
+                %li
+                  =image_tag( '1.jpg', :class => 'foto_slider_group' )
+                  %div 
+                    %p МРАМОРИЩЕ
+      %div.stonecontact.inline
+        %li.contact 
+          = link_to image_tag( 'skype.png', :class => 'contacts_to_stone' ), amsgroups_path, target: '_blank'
+        %li.contact
+          = link_to image_tag( 'github.png', :class => 'contacts_to_stone' ), amsgroups_path, target: '_blank'
+        %li.contact
+          = link_to image_tag( 'fb.png', :class => 'contacts_to_stone' ), amsgroups_path, target: '_blank'
+
+.tabbedstones
+  %input{:type=>"radio", :name => "sttabs", :id=>"stonestab-nav-1", :checked=> true}
+    %label{:for=>"stonestab-nav-1"} AMS Group 
+  %input{:type=>"radio", :name => "sttabs", :id=>"stonestab-nav-2"}
+    %label{:for=>"stonestab-nav-2"} AMS How we work
+  %input{:type=>"radio", :name => "sttabs", :id=>"stonestab-nav-3"}
+    %label{:for=>"stonestab-nav-3"} Production 
+  %input{:type=>"radio", :name => "sttabs", :id=>"stonestab-nav-4"}
+    %label{:for=>"stonestab-nav-4"} контакты
+  %div{ :class => ['stonestabs']}
+    %div
+      %div.amsgroup_maintext
+
+
+
+
+
+
+    %div
+      %h2 главная
+      %p Компания <strong>AMS Internatioanl</strong> предоставляет услуги доставки\заказа материала и изделий из гранита, а так же предоставляет отдельные услуги грузодоставки подобных материалов между объектами, по Украине и странам Евросоюза. Более детальную информацию о материалах, их цене и контакты Вы можете найти в соответствующих разделах сайта.
+    %div
+      %h2 главная
+      %p Компания <strong>AMS Internatioanl</strong> предоставляет услуги доставки\заказа материала и изделий из гранита, а так же предоставляет отдельные услуги грузодоставки подобных материалов между объектами, по Украине и странам Евросоюза. Более детальную информацию о материалах, их цене и контакты Вы можете найти в соответствующих разделах сайта.
+
+      
+
+    %div
+      %h2 главная
+      %p Компания <strong>AMS Internatioanl</strong> предоставляет услуги доставки\заказа материала и изделий из гранита, а так же предоставляет отдельные услуги грузодоставки подобных материалов между объектами, по Украине и странам Евросоюза. Более детальную информацию о материалах, их цене и контакты Вы можете найти в соответствующих разделах сайта.
+      %div.stone_gallery
+        - @groupcategory.each_slice(3) do |cat|
+          %div
+            - cat.each do  |c|
+              .ams_gallery_foto
+                %h2= link_to c.categoryname, c

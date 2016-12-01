@@ -3,8 +3,9 @@ class CreateAmsfoods < ActiveRecord::Migration
     create_table :amsfoods do |t|
       t.string :titlerus
       t.text :descriptionrus
-      t.integer :category_id
+      t.integer :foodcategory_id
       t.integer :user_id
+      t.integer :amsfoods_id
 
       t.timestamps null: false
     end

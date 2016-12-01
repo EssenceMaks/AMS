@@ -1,0 +1,9 @@
+.bodyams
+  %h1 ЭТО КАТЕГОРИЯ АМС
+  %h2= @groupcategory.categoryname
+  %br
+  
+  = link_to "Back", groupcategories_path, class: "btn btn-default"
+  - if user_signed_in?
+    = link_to "Edit", edit_groupcategory_path, class: "btn btn-default"
+    = link_to "delete", groupcategory_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"

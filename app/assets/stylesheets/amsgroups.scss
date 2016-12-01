@@ -33,6 +33,8 @@ label {
               width: 690px;
               height: 243px;
         }
+
+
 .tabbed {
   color: #EBCB79;
   background-color: none;
@@ -651,6 +653,66 @@ label {
                   }
 
 /* КАК МЫ РАБОТАЕМ END*/
+
+
+/* ПРОДУКЦИЯ BEGIN*/
+.stprod {
+  margin-top: 10px;
+}
+.amsproductsstones {
+  background-color: #50156E;
+  border: 2px solid #ffd700;
+
+}
+.stprod h3 {
+  text-align: center;
+  
+  color: #ffd700;
+}
+.stprod h2 {
+  color: #ffd700;
+}
+.stprod a {  
+  color: #ffd700;
+}
+
+
+.stprod h4 {
+  text-align: center;
+  
+  color: #ffd700;
+} 
+.stoneplatetext {
+  text-align: left;  
+  color: #ffd700;
+  padding: 2px 15px;
+} 
+.categoryblok {
+  width: 830px;
+  height: auto;
+  background-color: #50156E;
+  margin: 5px 20px;
+  padding: 5px;
+
+}
+
+.allproductplate {
+  width: 170px;
+  height: 235px;
+  
+  margin: 5px 10px;
+  padding: 5px;
+}
+
+    .allproductplateimg {
+      border: 2px solid #ffd700;
+      border-radius: 2px;
+      width: 154px;
+      height: 154px;
+      margin: 5px auto;
+    }
+
+/* ПРОДУКЦИЯ END*/
 
 @media screen and (max-width: 700px) {
   .tabbed { width: 400px }

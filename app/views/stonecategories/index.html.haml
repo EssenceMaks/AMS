@@ -1,0 +1,73 @@
+%div.bodyams
+  .bodyhead
+    %div.amslogo
+      = link_to image_tag( 'logo-ams.svg', :class => 'ams_logo_head' ), root_path, target: '_blank'
+    %div.tabbed
+      %input{:type=>"radio", :name => "tabs", :id=>"tab-nav-1", :checked=> true}
+        %label{:for=>"tab-nav-1"}=t 'welcome.ams'
+      %input{:type=>"radio", :name => "tabs", :id=>"tab-nav-2"}
+        %label{:for=>"tab-nav-2"}=t 'welcome.howwework'
+      %input{:type=>"radio", :name => "tabs", :id=>"tab-nav-3"}
+        %label{:for=>"tab-nav-3"}=t 'welcome.production'
+      %input{:type=>"radio", :name => "tabs", :id=>"tab-nav-4"}
+        %label{:for=>"tab-nav-4"}=t 'welcome.contacts'
+      .bodyamsgroup
+      %div{ :class => ['tabs']}
+
+          
+        %div.amsgroupproduction
+          %div.stprod.amsproductsstones
+            %h2=t 'welcome.stoneproduction' 
+            - @stonecategory.each do |cat|
+              /= cat.categoryname
+              %h3
+                = link_to cat.categoryname , categories_path(stonecategory: cat.categoryname)
+                #{":"}
+              .categoryblok
+                - cat.amsstones.each do |s|
+                  .allproductplate.inline
+                    %h4= link_to s.titlerus, stonecategories_path(stonecategory: cat.categoryname) 
+                    .allproductplateimg
+                      = link_to stonecategories_path(stonecategory: cat.categoryname) do
+                        = image_tag s.imagestone.url(:thumb)  
+                    - if user_signed_in?
+                      %h5.stoneplatetext= link_to truncate(s.number, length: 20), s
+                    - else
+                      %h5.stoneplatetext #{truncate(s.number, length: 20)}
+                    /= link_to " #{truncate(s.descriptionrus, length: 7)}", pr.url, target: '_blank'
+          
+        /
+          %div.stone_gallery
+            - @amsgroup.each_slice(3) do |group|
+              %div
+                - group.each do  |s|
+                  .ams_gallery_foto
+                    = link_to s do
+                      = image_tag s.imagegroup.url(:medium)
+                  %h2= link_to s.titlerus, s
+        %div
+            
+        %div 
+          %div.amsworktext
+            %h2=t 'welcome.title'
+            %br 
+            %p=t 'welcome.paragraph'
+        %div
+          %div.amsmap.right
+            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "350", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.730208596946!2d30.431012037035497!3d50.46474843315227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdc777aaaf995bf05!2z0KTQu9C-0YDQsCDQn9Cw0YDQug!5e0!3m2!1sru!2sua!4v1479894063059", :style => "border:0", :width => "450"}
+          
+          .ams_contacts
+            %h2=t 'welcome.contacts'
+            %li.inline
+              = link_to image_tag( 'mail.svg', :class => 'mail' ), amsgroups_path, target: '_blank'
+              %div.number international.ams.group@gmail.com
+            %li
+              = link_to image_tag( 'skype.svg', :class => 'wel_contact' ), amsgroups_path, target: '_blank'
+              = link_to image_tag( 'facebook-square.svg', :class => 'wel_contact' ), amsgroups_path, target: '_blank'
+              
+            %li
+              = link_to image_tag( 'viber.svg', :class => 'wel_contact inline' ), amsgroups_path, target: '_blank'
+              = link_to image_tag( 'whatsapp.svg', :class => 'wel_contact inline' ), amsgroups_path, target: '_blank'
+              %div.number +38093463769     
+            %li
+              %h3=t 'welcome.adress'

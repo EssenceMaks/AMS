@@ -21,7 +21,13 @@ class AmsgroupsController < ApplicationController
 			@amsstone = Amsstone.all.order("created_at DESC")
 			@amsfood = Amsfood.all.order("created_at DESC")
 			@category = Category.all.order("created_at DESC")
+			@stonecategory = Stonecategory.all.order("created_at DESC")
+			@foodcategory = Foodcategory.all.order("created_at DESC")
+			@groupcategory = Groupcategory.all.order("created_at DESC")
 		else
+			@stonecategory_id = Stonecategory.find_by(categoryname: params[:stonecategory]).id
+			@foodcategory_id = Foodcategory.find_by(categoryname: params[:foodcategory]).id
+			@groupcategory_id = Groupcategory.find_by(categoryname: params[:groupcategory]).id
 			@category_id = Category.find_by(categoryname: params[:category]).id
 			@amsgroup = Amsgroup.where(category_id: @category_id).order("created_at DESC")
 			@amsstone = Amsstone.where(category_id: @category_id).order("created_at DESC")
@@ -68,7 +74,7 @@ class AmsgroupsController < ApplicationController
 	private
 
 	def amsgroup_params
-		params.require(:amsgroup).permit(:titlerus, :descriptionrus, :category_id, :imagegroup)
+		params.require(:amsgroup).permit(:titlerus, :descriptionrus, :category_id, :imagegroup, :amsgroups_id)
 	end
 
 	def find_amsgroup

@@ -1,0 +1,2 @@
+module StonecategoriesHelper
+end

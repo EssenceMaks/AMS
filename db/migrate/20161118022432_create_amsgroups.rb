@@ -3,8 +3,9 @@ class CreateAmsgroups < ActiveRecord::Migration
     create_table :amsgroups do |t|
       t.string :titlerus
       t.text :descriptionrus
-      t.integer :category_id
+      t.integer :groupcategory_id
       t.integer :user_id
+      t.integer :amsgroups_id
 
       t.timestamps null: false
     end

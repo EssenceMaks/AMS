@@ -10,13 +10,21 @@ class AmsstonesController < ApplicationController
 		#@amsfood = Amsfood.all.order("created_at DESC")
 			@amsfoodpicture = Amsfoodpicture.all.order("created_at DESC")
 		#@category = Category.all.order("created_at DESC")
+		    @stone = Amsstone.all.each_with_index do |sto , d|
+		    end
 
 		if params[:category].blank?
 			@amsgroup = Amsgroup.all.order("created_at DESC")
 			@amsstone = Amsstone.all.order("created_at DESC")
 			@amsfood = Amsfood.all.order("created_at DESC")
 			@category = Category.all.order("created_at DESC")
+			@stonecategory = Stonecategory.all.order("created_at DESC")
+			@foodcategory = Foodcategory.all.order("created_at DESC")
+			@groupcategory = Groupcategory.all.order("created_at DESC")
 		else
+			@stonecategory_id = Stonecategory.find_by(categoryname: params[:stonecategory]).id
+			@foodcategory_id = Foodcategory.find_by(categoryname: params[:foodcategory]).id
+			@groupcategory_id = Groupcategory.find_by(categoryname: params[:groupcategory]).id
 			@category_id = Category.find_by(categoryname: params[:category]).id
 			@amsgroup = Amsgroup.where(category_id: @category_id).order("created_at DESC")
 			@amsstone = Amsstone.where(category_id: @category_id).order("created_at DESC")
@@ -62,7 +70,7 @@ class AmsstonesController < ApplicationController
 	private
 
 	def amsstone_params
-		params.require(:amsstone).permit(:titlerus, :number, :descriptionrus, :category_id, :imagestone)
+		params.require(:amsstone).permit(:titlerus, :number, :descriptionrus, :stonecategory_id, :imagestone, :amsstones_id)
 	end
 
 	def find_amsstone

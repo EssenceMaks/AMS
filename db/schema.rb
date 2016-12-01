@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161124093500) do
+ActiveRecord::Schema.define(version: 20161201024852) do
 
   create_table "amsfood_translations", force: :cascade do |t|
     t.integer  "amsfood_id",     null: false
@@ -52,8 +52,9 @@ ActiveRecord::Schema.define(version: 20161124093500) do
   create_table "amsfoods", force: :cascade do |t|
     t.string   "titlerus"
     t.text     "descriptionrus"
-    t.integer  "category_id"
+    t.integer  "foodcategory_id"
     t.integer  "user_id"
+    t.integer  "amsfoods_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "imagefood_file_name"
@@ -101,8 +102,9 @@ ActiveRecord::Schema.define(version: 20161124093500) do
   create_table "amsgroups", force: :cascade do |t|
     t.string   "titlerus"
     t.text     "descriptionrus"
-    t.integer  "category_id"
+    t.integer  "groupcategory_id"
     t.integer  "user_id"
+    t.integer  "amsgroups_id"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.string   "imagegroup_file_name"
@@ -151,8 +153,9 @@ ActiveRecord::Schema.define(version: 20161124093500) do
     t.string   "titlerus"
     t.string   "number"
     t.text     "descriptionrus"
-    t.integer  "category_id"
+    t.integer  "stonecategory_id"
     t.integer  "user_id"
+    t.integer  "amsstones_id"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.string   "imagestone_file_name"
@@ -162,6 +165,27 @@ ActiveRecord::Schema.define(version: 20161124093500) do
   end
 
   create_table "categories", force: :cascade do |t|
+    t.string   "categoryname"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "foodcategories", force: :cascade do |t|
+    t.string   "categoryname"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "groupcategories", force: :cascade do |t|
+    t.string   "categoryname"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "stonecategories", force: :cascade do |t|
     t.string   "categoryname"
     t.integer  "user_id"
     t.datetime "created_at",   null: false

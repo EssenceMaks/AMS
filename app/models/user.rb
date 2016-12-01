@@ -11,4 +11,7 @@ class User < ActiveRecord::Base
   has_many :amsstones
   has_many :amsstonepictures
   has_many :categories
+  has_many :foodcategories
+  has_many :groupcategories
+  has_many :stonecategories
 end
