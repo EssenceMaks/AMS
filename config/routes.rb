@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+#  constraints DomainConstraint.new('http://www.ams-international.net/') do
+#  root :to => 'amsgroups#welcome'
+#end
   root 'amsgroups#welcome'
   
   scope "/:locale", locale: /en|ru|ar/ do
@@ -27,6 +30,7 @@ Rails.application.routes.draw do
       resources :stonecategories
       resources :groupcategories
 
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
