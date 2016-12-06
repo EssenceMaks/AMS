@@ -3,4 +3,6 @@ class Groupcategory < ActiveRecord::Base
 
 
 	has_many :amsgroups
+
+	translates :categoryname
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201024852) do
+ActiveRecord::Schema.define(version: 20161206004332) do
 
   create_table "amsfood_translations", force: :cascade do |t|
     t.integer  "amsfood_id",     null: false
@@ -178,6 +178,17 @@ ActiveRecord::Schema.define(version: 20161201024852) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "foodcategory_translations", force: :cascade do |t|
+    t.integer  "foodcategory_id", null: false
+    t.string   "locale",          null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "categoryname"
+  end
+
+  add_index "foodcategory_translations", ["foodcategory_id"], name: "index_foodcategory_translations_on_foodcategory_id"
+  add_index "foodcategory_translations", ["locale"], name: "index_foodcategory_translations_on_locale"
+
   create_table "groupcategories", force: :cascade do |t|
     t.string   "categoryname"
     t.integer  "user_id"
@@ -185,12 +196,34 @@ ActiveRecord::Schema.define(version: 20161201024852) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "groupcategory_translations", force: :cascade do |t|
+    t.integer  "groupcategory_id", null: false
+    t.string   "locale",           null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "categoryname"
+  end
+
+  add_index "groupcategory_translations", ["groupcategory_id"], name: "index_groupcategory_translations_on_groupcategory_id"
+  add_index "groupcategory_translations", ["locale"], name: "index_groupcategory_translations_on_locale"
+
   create_table "stonecategories", force: :cascade do |t|
     t.string   "categoryname"
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
+
+  create_table "stonecategory_translations", force: :cascade do |t|
+    t.integer  "stonecategory_id", null: false
+    t.string   "locale",           null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "categoryname"
+  end
+
+  add_index "stonecategory_translations", ["locale"], name: "index_stonecategory_translations_on_locale"
+  add_index "stonecategory_translations", ["stonecategory_id"], name: "index_stonecategory_translations_on_stonecategory_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

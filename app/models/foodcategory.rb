@@ -3,4 +3,6 @@ class Foodcategory < ActiveRecord::Base
 
 	has_many :amsfoods
 
+
+	translates :categoryname
 end

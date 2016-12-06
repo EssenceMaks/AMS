@@ -4,4 +4,5 @@ class Stonecategory < ActiveRecord::Base
 
 	has_many :amsstones
 
+	translates :categoryname
 end
