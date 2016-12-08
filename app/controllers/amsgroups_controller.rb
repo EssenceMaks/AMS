@@ -16,7 +16,7 @@ class AmsgroupsController < ApplicationController
 			@amsfoodpicture = Amsfoodpicture.all.order("created_at DESC")
 		#@category = Category.all.order("created_at DESC")
 
-		if params[:category].blank?
+		if params[:stonecategory].blank?
 			@amsgroup = Amsgroup.all.order("created_at DESC")
 			@amsstone = Amsstone.all.order("created_at DESC")
 			@amsfood = Amsfood.all.order("created_at DESC")

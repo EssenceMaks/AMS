@@ -1,3 +1,121 @@
 // Place all the styles related to the stonecategories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bodycurrentstonecategory {
+      width: 1200px;
+      height: auto;
+      margin: 0px auto;
+
+}
+.headplatescurrentstonecategory {
+	    width: 1200px;
+	    height: auto;
+    	margin: 0px auto;
+    	border-left: 4px double #ffd700;
+  		border-right: 4px double #ffd700;
+
+}
+		.miniplatescurrentstonecategory {
+		  width: 1200px;
+
+
+		}
+
+		.miniplatescurrentstonecategory > input {
+		  display: none;
+
+		}
+
+		.inputu {
+			display: inline-block;
+		}
+
+
+		.btnplatein{
+			display: inline-block;
+			float: left;
+		}
+		.btnplate {
+			width: 180px;
+			height: 215px;
+		    border-left: 2px solid #ffd700;
+  			border-right: 2px solid #ffd700;
+			margin: 10px 0px;
+			margin-left: 14px;
+		}
+
+				.currentplate {
+					margin: 0px 0px;
+				}
+
+				.currentplate h4 {
+					text-align: center;
+					position: center;
+				}
+
+				.imagecurrentplate {
+					width: 176px;
+					height: 176px;
+				}
+
+		.miniplatescurrentstonecategory > label {
+		  background: #50156E;
+		  display: inline-block;
+
+		  
+		/*  padding: 12px 20px;
+		  margin-right: 5px;
+		  margin-bottom: 5px;  */
+		  cursor: pointer;
+		  transition: background-color .3s;
+		}
+
+		.miniplatescurrentstonecategory > label:hover,
+		.miniplatescurrentstonecategory > input:checked + label {
+		  background-image:  url(image_path('congruent_pentagon.png'));
+  			background: #ffd700;
+  			color: #50156E;
+
+		}
+
+
+.stabs {
+  clear: both;
+  perspective: 1200px;
+
+}
+
+.stabs > div {
+
+  border-left: 4px double #ffd700;
+  border-right: 4px double #ffd700;
+  width: 1200px;
+  border-radius: 0px;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -4px;
+  padding: 10px 30px 40px;
+  line-height: 1.4em;
+  opacity: 0;
+  transform: rotateX(-20deg);
+  transform-origin: top center;
+  transition: opacity .3s, transform 1s;
+  z-index: 0;
+}
+
+#stab-nav-1:checked ~ .stabs > div:nth-of-type(1),
+#stab-nav-2:checked ~ .stabs > div:nth-of-type(2),
+#stab-nav-3:checked ~ .stabs > div:nth-of-type(3),
+#stab-nav-4:checked ~ .stabs > div:nth-of-type(4),
+#stab-nav-5:checked ~ .stabs > div:nth-of-type(5),
+#stab-nav-6:checked ~ .stabs > div:nth-of-type(6),
+#stab-nav-7:checked ~ .stabs > div:nth-of-type(7),
+#stab-nav-8:checked ~ .stabs > div:nth-of-type(8),
+#stab-nav-9:checked ~ .stabs > div:nth-of-type(9),
+#stab-nav-10:checked ~ .stabs > div:nth-of-type(10) {
+  transform: rotateX(0deg);
+  opacity: 1;
+  z-index: 1;
+
+}

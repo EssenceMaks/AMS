@@ -1,0 +1,82 @@
+<div class='bodycurrentstonecategory'>
+  <h1>ЭТО <%=@stonecategory.categoryname%> КАТЕГОРИЯ</h1> 
+  <div class='headplatescurrentstonecategory'>
+    <div class='miniplatescurrentstonecategory'>
+      <% stonesofcategory = @stonecategory.amsstones %>
+      <% stonesofcategory.each_with_index do |catstone, i| %>
+        <% element_id = "stab-nav-#{i+1}" %>
+        
+	        <input type="radio" name="stabs" id="<%= element_id %>" <% if i==0 %>checked<%end%>>
+	        <label class=" btnplate" for="<%= element_id %>">
+	        	<div class = 'currentplate'>
+		            <div class = ''><h4><%=catstone.titlerus %> </h4></div>
+		            <div class = 'imagecurrentplate'><%=image_tag catstone.imagestone.url(:medium), :class => "imagecurrentplate" %> </div>
+		        </div>
+	        </label>
+	
+      <% end %>
+	      <div class="stabs">
+	        <% stonesofcategory.each_with_index do |catstone, i| %>
+	          <div>
+	            <h2> <%=@stonecategory.categoryname%> </h2>
+	            <h3> <%=catstone.titlerus %> </h3>
+	            <h3> <%=catstone.number %> </h3>
+	            <%=image_tag catstone.imagestone.url(:medium), :class => "style_image" %>
+	          </div>
+	        <% end %>
+	      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+.bodyams
+  %h1 ЭТО STONE КАТЕГОРИЯ
+  %h2= @stonecategory.categoryname
+  %br
+  - @stonecategory.amsstones.each do | st |
+    %div
+      %h4= st.titlerus
+  %br
+
+  .stabbed
+    - @stonecategory.amsstones.each_with_index do |catstone, i|
+      /- element_id = "stab-nav-#{i+1}"
+      /%input{:id => "#{element_id}", :name => "stabs", :type => "radio"}/
+      //, :checked => "#{if i==0}"
+      /%label{:for => "#{element_id}"} 
+      /%h4 
+      /  #{i}
+      /  Наши услуги
+      /  = element_id 
+      - element_id = "stab-nav-#{i+1}"
+      %input{:id => "#{element_id}", :type => "radio",:name => "stabs"}/
+      %label{:for => "#{element_id}>"}
+      %div{ :class => ['stabs']}
+        %div
+          %h3=catstone.titlerus
+          %h3=catstone.number
+  .bodyhead
+    %div.amslogo
+      = link_to image_tag( 'logo-ams.svg', :class => 'ams_logo_head' ), root_path, target: '_blank'
+    %div.tabbed
+      %input{:type=>"radio", :name => "tabs", :id=>"tab-nav-1", :checked=> true}
+        %label{:for=>"tab-nav-1"}=t 'welcome.ams'
+      %input{:type=>"radio", :name => "tabs", :id=>"tab-nav-2"}
+        %label{:for=>"tab-nav-2"}=t 'welcome.howwework'
+      %input{:type=>"radio", :name => "tabs", :id=>"tab-nav-3"}
+        %label{:for=>"tab-nav-3"}=t 'welcome.production'
+      %input{:type=>"radio", :name => "tabs", :id=>"tab-nav-4"}
+        %label{:for=>"tab-nav-4"}=t 'welcome.contacts'
+      .bodyamsgroup
+      %div{ :class => ['tabs']}
+        %div
+
+  = link_to "Back", stonecategories_path, class: "btn btn-default"
+  - if user_signed_in?
+    = link_to "Edit", edit_stonecategory_path, class: "btn btn-default"
+    = link_to "delete", stonecategory_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
+
+-->

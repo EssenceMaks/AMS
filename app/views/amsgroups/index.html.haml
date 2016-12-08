@@ -92,10 +92,10 @@
         %div.amsgroupproduction
           %div.stprod.amsproductsstones
             %h2=t 'welcome.stoneproduction' 
-            - @stonecategory.each do |cat|
+            - Stonecategory.all.each do |cat|
               /= cat.categoryname
               %h3
-                = link_to cat.categoryname , categories_path(stonecategory: cat.categoryname)
+                = link_to cat.categoryname , cat
                 #{":"}
               .categoryblok
                 - cat.amsstones.each do |s|
