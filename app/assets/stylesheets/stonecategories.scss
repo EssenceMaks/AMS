@@ -37,8 +37,8 @@
 			float: left;
 		}
 		.btnplate {
-			width: 180px;
-			height: 215px;
+			width: 120px;
+			height: 151px;
 		    border-left: 2px solid #ffd700;
   			border-right: 2px solid #ffd700;
 			margin: 10px 0px;
@@ -48,15 +48,9 @@
 				.currentplate {
 					margin: 0px 0px;
 				}
-
-				.currentplate h4 {
-					text-align: center;
-					position: center;
-				}
-
 				.imagecurrentplate {
-					width: 176px;
-					height: 176px;
+					width: 116px;
+					height: 116px;
 				}
 
 		.miniplatescurrentstonecategory > label {
@@ -84,6 +78,22 @@
   clear: both;
   perspective: 1200px;
 
+}
+
+.width365 {
+	width: 365px;
+}
+
+.textleft {
+	text-align: left;
+}
+
+.textcenter {
+	text-align: center;
+}
+
+.textright {
+	text-align: right;
 }
 
 .stabs > div {
