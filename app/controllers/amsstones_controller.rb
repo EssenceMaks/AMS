@@ -61,7 +61,7 @@ class AmsstonesController < ApplicationController
 	end
 
 	def show
-		@stonecategory = Stonecategory.find(params[:id])
+		
 	end
 
 	def new

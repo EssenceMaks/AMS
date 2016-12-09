@@ -33,7 +33,7 @@
 
               - Stonecategory.all.each do |cat|
                 /= cat.categoryname
-                %h3= link_to cat.categoryname , amsstones_path(stonecategory: cat.categoryname)
+                %h3= link_to cat.categoryname , cat
                 /= link_to " #{truncate(s.descriptionrus, length: 7)}", pr.url, target: '_blank'
         /
           %div.stone_gallery
