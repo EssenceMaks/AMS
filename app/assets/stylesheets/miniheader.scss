@@ -1,0 +1,76 @@
+.miniheader {
+      width: 1200px;
+      height: 104px;
+      margin: 0px auto;
+    	border-left: 4px double #ffd700;
+  		border-right: 4px double #ffd700;
+  		border-bottom: 2px solid #ffd700;
+  		border-top: 2px solid #ffd700;
+}
+
+.amslogominihead {
+	height: 90px;
+	width: 300px;
+	margin: 5px 5px;
+
+}
+	.miniheadlogo {
+	}
+
+.miniheadcontacts{
+	height: 90px;
+	width: 600px;
+	margin: 5px 5px;
+
+}
+.miniheadcontacts > h3 {
+	margin-top: -5px;
+}
+.miniheadcontacts > h3 > li {
+	list-style-type: none; 
+	
+}
+
+.miniheadnation {
+	height: 100px;
+	width: 40px;
+	margin: 0px 0px;
+
+}
+
+.miniheadlanguage {
+	list-style-type: none; 
+	height: 28px;
+	width: 36px;
+	margin: 4px;
+	padding: 0px;
+	background-color: #50156E;
+	    border-left: 1px solid #ffd700;
+  		border-bottom: 1px solid #ffd700;
+  		border-top: 1px solid #ffd700;
+  		border-radius: 3px 0px 0px 3px;
+	font-size: 22px;
+	    padding-top: 1px;
+	text-align: center;
+}
+
+
+		
+		.miniheadnation > li:hover,
+		.miniheadnation > li:checked {
+
+  			background: #ffd700;
+  			color: #50156E;
+
+		}
+		.miniheadnation > li> a {
+			color: black;
+		}
+
+		.miniheadnation > li> a:hover,
+		.miniheadnation > li> a:checked {
+			text-decoration: none;
+  			background: #ffd700;
+  			color: #50156E;
+
+		}

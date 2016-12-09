@@ -8,17 +8,32 @@
       margin: 0px auto;
 
 }
+.headcurrentstonecategory {
+      width: 1200px;
+      height: auto;
+      margin: 0px auto;
+}
+
+.headcurrentstonecategory > h1 {
+	width: 548px;
+	margin: 20px;
+}
+
+.headcurrentstonecategory > h1 > a {
+	color: #ffd700;
+}
 .headplatescurrentstonecategory {
 	    width: 1200px;
 	    height: auto;
     	margin: 0px auto;
+    	margin-top: 10px;
     	border-left: 4px double #ffd700;
   		border-right: 4px double #ffd700;
 
 }
 		.miniplatescurrentstonecategory {
 		  width: 1200px;
-
+		  padding-left: 0px ;
 
 		}
 
@@ -41,8 +56,8 @@
 			height: 151px;
 		    border-left: 2px solid #ffd700;
   			border-right: 2px solid #ffd700;
-			margin: 10px 0px;
-			margin-left: 14px;
+			margin: 10px 3px;
+			margin-left: 20px;
 		}
 
 				.currentplate {
@@ -80,8 +95,8 @@
 
 }
 
-.width365 {
-	width: 365px;
+.width380 {
+	width: 380px;
 }
 
 .textleft {
@@ -103,9 +118,10 @@
   width: 1200px;
   border-radius: 0px;
   position: absolute;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: -4px;
-  padding: 10px 30px 40px;
+  padding-left: 20px ;
+  padding-right: 20px;
   line-height: 1.4em;
   opacity: 0;
   transform: rotateX(-20deg);

@@ -1,6 +1,20 @@
+<%= render 'layouts/miniheader' %>
 <div class='bodycurrentstonecategory'>
-  <h1>ЭТО <%=@stonecategory.categoryname%> КАТЕГОРИЯ</h1> 
+
   <div class='headplatescurrentstonecategory'>
+  		<div class="headcurrentstonecategory">
+		  <h1 class="inline textleft "> <%=@stonecategory.categoryname%> :
+		  		<%- if user_signed_in? %>
+		  			<a "><%= link_to "Edit", edit_stonecategory_path, class: "textleft", style:"color: #50156E" %></a> 
+		  		<% end %>
+		  		
+		  </h1> 
+		  <h1 class="inline textright">
+		  		<%= link_to amsgroups_path do %> 
+		  			<%= t 'welcome.mainmenu'%>
+		  		<% end%>
+		  </h1>
+		</div>
     <div class='miniplatescurrentstonecategory'>
       <% stonesofcategory = @stonecategory.amsstones %>
       <% stonesofcategory.each_with_index do |catstone, i| %>
@@ -18,15 +32,15 @@
 	      <div class="stabs" >
 	        <% stonesofcategory.each_with_index do |catstone, i| %>
 	          <div>
-	            <h2  class="inline textleft width365" > <%=@stonecategory.categoryname%> </h2>
-	            <h3  class="inline textcenter width365" > <%=catstone.titlerus %> </h3>
-	            <h3  class="inline textright width365" > <%=catstone.number %> </h3>
-	            	<div class=" textcenter " > <%= link_to (image_tag catstone.imagestone.url(:hard),:class => "style_image"), catstone %>
+	            <h2  class="inline textleft width380" > <%=@stonecategory.categoryname%> </h2>
+	            <h3  class="inline textcenter width380" > <%=catstone.titlerus %> </h3>
+	            <h3  class="inline textright width380" > <%=catstone.number %> </h3>
+	            	<div class=" textleft " > <%= link_to (image_tag catstone.imagestone.url(:hard),:class => "style_image"), catstone %>
 	            	</div>
 	            	<!--<div class=" textcenter " > <%=image_tag catstone.imagestone.url(:hard), :class => "style_image" %>
 	            	</div> -->
 	            <h5 class= "textcenter" > <%=catstone.descriptionrus %> </h5>
-
+	            
 	          </div>
 	        <% end %>
 	      </div>
@@ -37,6 +51,14 @@
 
 
 <!--
+
+<div class="btn-group pull-right">
+          <a><%= link_to "Back", amsgroups_path, class: "btn btn-default"%></a>
+          <a><%= link_to "Edit",edit_amsgroup_path, class: "btn btn-default" %></a>
+          <a><%= link_to "Main",amsgroups_path, class: "btn btn-default" %></a>
+</div>
+
+
 .bodyams
   %h1 ЭТО STONE КАТЕГОРИЯ
   %h2= @stonecategory.categoryname
