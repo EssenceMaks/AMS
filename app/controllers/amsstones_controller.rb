@@ -30,6 +30,7 @@ class AmsstonesController < ApplicationController
 		else
 			#@stonecategory_id = Stonecategory.find_by(categoryname: params[:stonecategory]).id
 			@amsstone = Amsstone.where(stonecategory_id: @stonecategory_id).order("created_at DESC")
+
 			#@resumes = Resume.where(soul_id: @soul).order("created_at DESC")
 		end
 
@@ -62,6 +63,11 @@ class AmsstonesController < ApplicationController
 
 	def show
 		
+		
+		@amsstony =  @amsstone.stonecategory_id
+		@stonecategory = Stonecategory.where(stonecategory_id: @amsstony).order("created_at DESC")
+		#@category_id = Category.find_by(name: params[:category]).id
+		#@jobs = Job.where(category_id: @category_id).order("created_at DESC")
 	end
 
 	def new

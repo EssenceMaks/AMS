@@ -4,7 +4,7 @@
     %h1.textcenter=t 'welcome.stoneproduction'
   .div.headcurrentstoneblocks.inline
     .div.headcurrentstonefirstblock.inline.left
-      %h1= link_to @amsstone.stonecategory.categoryname, stonecategory_path
+      %h1= link_to @amsstone.stonecategory.categoryname, stonecategory_path(@amsstony)
       .div= image_tag @amsstone.imagestone.url(:simple), class: "headcurrentstonepicture"
     .div.headcurrentstonesecondblock.inline.left
       %h1
