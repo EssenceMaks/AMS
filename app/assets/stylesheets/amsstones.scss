@@ -167,10 +167,104 @@
 	border-radius: 6px;
 }
 
+/* SHOW DIRECTION BEGINE */
+
+
+.headcurrentstone{
+      width: 1200px;
+      height: 443px;
+      margin: 0px auto;
+      margin-top: 10px;
+
+      border-left: 4px double #ffd700;
+      border-right: 4px double #ffd700;
+      padding: 0px 20px;
+}
+    .headcurrentstoneams {
+      margin: 0px;
+      width: 1150px;
+      text-align: center;
+    }
+    .headcurrentstonepicture {
+      width: 350px;
+      height: 350px;
+       border-left: 2px solid #ffd700;
+       border-right: 2px solid #ffd700;
+      z-index: 0;
+    }
+
+
+.headcurrentstonefirstblock {
+    width: 354px;
+    height: 394px;
+
+}
+      .headcurrentstonefirstblock > h1 {
+        text-align: center;
+        margin: 0px;
+        margin-bottom: 5px;
+      }
+          .headcurrentstonefirstblock  > h1 > a{
+              color: #ffd700;
+              
+          }
+
+.headcurrentstonesecondblock {
+      width: 600px;
+      height: 394px;
+      padding: 10px;
+      padding-top: 40px;
+}
+
+      .headcurrentstonesecondblock  > h1 {
+          margin-bottom: 10px;
+          margin-top: 0px;
+          }
 
 
 
+      .headcurrentstonesecondblock  > h2 {
+          margin-bottom: 10px;
+          margin-top: 0px;
+          }
 
+      .headcurrentstonesecondblock  > h3 {
+          margin-bottom: 10px;
+          margin-top: 0px;
+          height: auto;
+          max-height: 215px;
+          width: 550px;
+          overflow-x: auto;
+          }
+
+
+.headcurrentstonethirdblock {
+
+      width: 195px;
+      height: 394px;
+      padding: 10px;
+      padding-top: 40px;
+}
+      .headcurrentstonethirdblock  > h1 {
+          margin-bottom: 10px;
+          margin-top: 0px;
+      }
+          .headcurrentstonethirdblock  > h1 > a{
+              color: #ffd700;
+              
+          }
+
+.bodycurrentstone {
+      width: 1200px;
+      height: 1000px;
+      margin: 0px auto;
+      border-left: 4px double #ffd700;
+      border-right: 4px double #ffd700;
+      padding: 0px 20px;
+      margin-top: 10px;
+}
+
+/* SHOW DIRECTION END */
 
 .stoneproduct {
   color: #ffd700;

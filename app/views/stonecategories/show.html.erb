@@ -18,7 +18,7 @@
     <div class='miniplatescurrentstonecategory'>
       <% stonesofcategory = @stonecategory.amsstones %>
       <% stonesofcategory.each_with_index do |catstone, i| %>
-        <% element_id = "stab-nav-#{i+1}" %>
+        	<% element_id = "stab-nav-#{i+1}" %>
         
 	        <input type="radio" name="stabs" id="<%= element_id %>" <% if i==0 %>checked<%end%>>
 	        <label class=" btnplate" for="<%= element_id %>">
@@ -31,17 +31,16 @@
       <% end %>
 	      <div class="stabs" >
 	        <% stonesofcategory.each_with_index do |catstone, i| %>
-	          <div>
-	            <h2  class="inline textleft width380" > <%=@stonecategory.categoryname%> </h2>
-	            <h3  class="inline textcenter width380" > <%=catstone.titlerus %> </h3>
-	            <h3  class="inline textright width380" > <%=catstone.number %> </h3>
-	            	<div class=" textleft " > <%= link_to (image_tag catstone.imagestone.url(:hard),:class => "style_image"), catstone %>
-	            	</div>
-	            	<!--<div class=" textcenter " > <%=image_tag catstone.imagestone.url(:hard), :class => "style_image" %>
-	            	</div> -->
-	            <h5 class= "textcenter" > <%=catstone.descriptionrus %> </h5>
-	            
-	          </div>
+		          <div>
+		            <h2  class="inline textleft width380" > <%=@stonecategory.categoryname%> </h2>
+		            <h3  class="inline textcenter width380" > <%=catstone.titlerus %> </h3>
+		            <h3  class="inline textright width380" > <%=catstone.number %> </h3>
+		            	<div class=" textleft " > <%= link_to (image_tag catstone.imagestone.url(:hard),:class => "style_image"), catstone %>
+		            	</div>
+		            	<!--<div class=" textcenter " > <%=image_tag catstone.imagestone.url(:hard), :class => "style_image" %>
+		            	</div> -->
+		            <h5 class= "textcenter" > <%=catstone.descriptionrus %> </h5>
+		          </div>
 	        <% end %>
 	      </div>
     </div>

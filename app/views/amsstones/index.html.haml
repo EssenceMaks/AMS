@@ -18,23 +18,23 @@
         %div.amsgroupproduction
           %div.stprod.amsproductsstones
             %h2=t 'welcome.stoneproduction' 
-            - Stonecategory.all.each do |cat|
-              /= cat.categoryname
-              %h3
-                = link_to cat.categoryname , amsstones_path(stonecategory: cat.categoryname)
-                #{":"}
-              .categoryblok
-                - @amsstone.each do |s|
-                  .allproductplate.inline
-                    %h4= link_to s.titlerus, amsstones_path(stonecategory: cat.categoryname) 
-                    .allproductplateimg
-                      = link_to amsstones_path(stonecategory: cat.categoryname) do
-                        = image_tag s.imagestone.url(:thumb)  
-                    - if user_signed_in?
-                      %h5.stoneplatetext= link_to truncate(s.number, length: 20), s
-                    - else
-                      %h5.stoneplatetext #{truncate(s.number, length: 20)}
-                    /= link_to " #{truncate(s.descriptionrus, length: 7)}", pr.url, target: '_blank'
+            .categoryblok
+              - @amsstone.each do |s|
+                .allproductplate.inline
+                  %h4= link_to truncate(s.titlerus, length: 14), s
+                  .allproductplateimg
+                    = link_to s do
+                      = image_tag s.imagestone.url(:thumb)  
+                  - if user_signed_in?
+                    %h5.stoneplatetext= link_to truncate(s.number, length: 20), s
+                  - else
+                    %h5.stoneplatetext #{truncate(s.number, length: 20)}
+            .div
+
+              - Stonecategory.all.each do |cat|
+                /= cat.categoryname
+                %h3= link_to cat.categoryname , amsstones_path(stonecategory: cat.categoryname)
+                /= link_to " #{truncate(s.descriptionrus, length: 7)}", pr.url, target: '_blank'
         /
           %div.stone_gallery
             - @amsgroup.each_slice(3) do |group|

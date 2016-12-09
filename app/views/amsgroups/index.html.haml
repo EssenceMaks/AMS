@@ -100,7 +100,7 @@
               .categoryblok
                 - cat.amsstones.each do |s|
                   .allproductplate.inline
-                    %h4= link_to s.titlerus, cat 
+                    %h4= link_to truncate(s.titlerus, length: 14), cat 
                     .allproductplateimg
                       = link_to cat do
                         = image_tag s.imagestone.url(:thumb)  

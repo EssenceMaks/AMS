@@ -1,12 +1,25 @@
-.bodyams
-  %h1 Эдиница Товара AMS Stone
-  = image_tag @amsstone.imagestone.url(:medium, class: "ams_gallery_foto")
-  %h2= @amsstone.titlerus
-  %br
-  %h3= @amsstone.descriptionrus
-  %br
+= render 'layouts/miniheader'
+.headcurrentstone
+  .div.headcurrentstoneams
+    %h1.textcenter=t 'welcome.stoneproduction'
+  .div.headcurrentstoneblocks.inline
+    .div.headcurrentstonefirstblock.inline.left
+      %h1= link_to @stonecategory.categoryname, stonecategory_path
+      .div= image_tag @amsstone.imagestone.url(:simple), class: "headcurrentstonepicture"
+    .div.headcurrentstonesecondblock.inline.left
+      %h1
+        = @amsstone.titlerus
+      %h2
+        = @amsstone.number
+      %br
+      %h3.textleft= @amsstone.descriptionrus
+      %br
 
-  = link_to "Back", amsstones_path, class: "btn btn-default"
-  - if user_signed_in?
-    = link_to "Edit", edit_amsstone_path, class: "btn btn-default"
-    = link_to "delete", amsstone_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
+
+      - if user_signed_in?
+        = link_to "Edit", edit_amsstone_path, class: "btn btn-default"
+        = link_to "delete", amsstone_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
+    .div.headcurrentstonethirdblock.inline
+      %h1= link_to "All Stones", amsstones_path
+.bodycurrentstone
+  = image_tag @amsstone.imagestone.url(:hard, class: "ams_gallery_foto")
