@@ -105,3 +105,67 @@
 	font-size: 20px;
 	margin: 15px 5px;
 }
+
+@media screen and (max-width: 700px) {
+/* 	body {
+		width: 400px;
+		min-width: 400px;
+	} */
+	.welcomepagebackground {
+		display: block;
+		width: 400px;
+		margin: 10px auto;
+		height: auto;
+		background-color: blue;
+		background-image: none; /*url('wall.png');*/
+	}
+
+	.welcome {
+	    background-color: black;
+	    width: 400px;
+	    min-width: 400px;
+	}
+
+	.welcome_logo{
+	    width: 400px;
+	    min-width: 400px;
+	}
+
+
+	.welcomelanguge {
+		width: 400px;
+		display: block;
+	}
+
+	.welcome_contacts {
+		width: 400px;
+		min-width: 400px;
+	}
+	.welcome_contacts > .inline{
+		
+	}
+	.welcome_contacts > .left{
+		float: inherit;
+	}
+		.welcome_contacts > .right{
+		float: inherit;
+	}
+	.wel_contact {
+		display: none;
+	}
+			 /* .tabbed { width: 400px }
+  .tabbed > label { display: none }
+  .tabs > div {
+    width: 400px;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    position: relative;
+    transform: none;
+    margin-bottom: 60px;
+  }
+  .tabs > div h2 {
+    border-bottom: 2px solid #4EC6DE;
+    padding-bottom: .5em;
+  } */
+}
