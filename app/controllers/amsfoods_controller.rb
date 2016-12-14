@@ -12,22 +12,36 @@ class AmsfoodsController < ApplicationController
 			@amsfoodpicture = Amsfoodpicture.all.order("created_at DESC")
 		#@category = Category.all.order("created_at DESC")
 
-		if params[:category].blank?
 			@amsgroup = Amsgroup.all.order("created_at DESC")
-			@amsstone = Amsstone.all.order("created_at DESC")
+
+
+		#if params[:category].blank?
+		#	@amsgroup = Amsgroup.all.order("created_at DESC")
+		#	@amsstone = Amsstone.all.order("created_at DESC")
+		#	@amsfood = Amsfood.all.order("created_at DESC")
+		#	@category = Category.all.order("created_at DESC")
+		#else
+		#	@category_id = Category.find_by(categoryname: params[:category]).id
+		#	@amsgroup = Amsgroup.where(category_id: @category_id).order("created_at DESC")
+		#	@amsstone = Amsstone.where(category_id: @category_id).order("created_at DESC")
+		#	@amsfood = Amsfood.where(category_id: @category_id).order("created_at DESC")
+		#end
+
+		if params[:foodcategory].blank?
 			@amsfood = Amsfood.all.order("created_at DESC")
-			@category = Category.all.order("created_at DESC")
 		else
-			@category_id = Category.find_by(categoryname: params[:category]).id
-			@amsgroup = Amsgroup.where(category_id: @category_id).order("created_at DESC")
-			@amsstone = Amsstone.where(category_id: @category_id).order("created_at DESC")
-			@amsfood = Amsfood.where(category_id: @category_id).order("created_at DESC")
+			#@stonecategory_id = Stonecategory.find_by(categoryname: params[:stonecategory]).id
+			@amsfood = Amsfood.where(foodcategory_id: @foodcategory_id).order("created_at DESC")
+
+			#@resumes = Resume.where(soul_id: @soul).order("created_at DESC")
 		end
+
 		
 	end
 
 	def show
-		
+		@amsfoody =  @amsfood.foodcategory_id
+		@foodcategory = Foodcategory.where(foodcategory_id: @amsfoody).order("created_at DESC")
 	end
 
 	def new

@@ -659,11 +659,19 @@ label {
 .stprod {
   margin-top: 10px;
 }
-.amsproductsstones {
-  background-color: #50156E;
-  border: 2px solid #ffd700;
 
-}
+
+    .amsproductsstones {
+      background-color: #50156E;
+      border: 2px solid #ffd700;
+    }
+    .amsproductsfoods {
+  background-color: #851452;
+  border: 2px solid #ffd700;
+    }
+
+
+
 .stprod h3 {
   text-align: center;
   
@@ -690,14 +698,17 @@ label {
 .categoryblok {
   width: 830px;
   height: auto;
-  background-color: #50156E;
   margin: 5px 20px;
   padding: 5px;
   white-space: nowrap;
   overflow: auto;
-
 }
-
+      .stonecolor {
+        background-color: #50156E;
+      }
+      .foodcolor {
+        background-color: #851452;
+      }
 .allproductplate {
   width: 170px;
   height: 235px;

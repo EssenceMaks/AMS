@@ -97,7 +97,7 @@
               %h3
                 = link_to cat.categoryname , cat
                 #{":"}
-              .categoryblok
+              .categoryblok.stonecolor
                 - cat.amsstones.each do |s|
                   .allproductplate.inline
                     %h4= link_to truncate(s.titlerus, length: 14), cat 
@@ -109,6 +109,24 @@
                     - else
                       %h5.stoneplatetext #{truncate(s.number, length: 20)}
                     /= link_to " #{truncate(s.descriptionrus, length: 7)}", pr.url, target: '_blank'
+          %div.stprod.amsproductsfoods 
+            %h2=t 'welcome.foodproduction' 
+            - Foodcategory.all.each do |food|
+              /= food.categoryname
+              %h3
+                = link_to food.categoryname , food
+                #{":"}
+              .categoryblok.foodcolor
+                - food.amsfoods.each do |s|
+                  .allproductplate.inline
+                    %h4= link_to truncate(s.titlerus, length: 14), food 
+                    .allproductplateimg
+                      = link_to food do
+                        = image_tag s.imagefood.url(:thumb)  
+                    - if user_signed_in?
+                      %h5.stoneplatetext= link_to truncate(s.descriptionrus, length: 20), s
+                    - else
+                      %h5.stoneplatetext #{truncate(s.descriptionrus, length: 20)}
           
         /
           %div.stone_gallery

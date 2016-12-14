@@ -1,11 +1,39 @@
-%h1 this is the face of user, like a person status
-= image_tag @amsfood.imagefood.url(:medium, class: "ams_gallery_foto")
-%h2= @amsfood.titlerus
-%br
-%h3= @amsfood.descriptionrus
-%br
+= render 'layouts/miniheader'
+.headcurrentstone
+  .div.headcurrentstoneams
+    %h1.textcenter=t 'welcome.stoneproduction'
+  .div.headcurrentstoneblocks.inline
+    .div.headcurrentstonefirstblock.inline.left
+      %h1= link_to @amsfood.foodcategory.categoryname, foodcategory_path(@amsfoody)
+      .div= image_tag @amsfood.imagefood.url(:simple), class: "headcurrentstonepicture"
+    .div.headcurrentstonesecondblock.inline.left
+      %h1
+        = @amsfood.titlerus
+      %h2
+        /= @amsfood.number
+      %br
+      %h3.textleft= @amsfood.descriptionrus
+      %br
 
-= link_to "Back", amsfoods_path, class: "btn btn-default"
-- if user_signed_in?
-  = link_to "Edit", edit_amsfood_path, class: "btn btn-default"
-  = link_to "delete", amsfood_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
+
+      - if user_signed_in?
+        = link_to "Edit", edit_amsfood_path, class: "btn btn-default"
+        = link_to "delete", amsfood_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
+    .div.headcurrentstonethirdblock.inline
+      %h1= link_to "All Stones", amsfoods_path
+.bodycurrentstone
+  = image_tag @amsfood.imagefood.url(:hard, class: "ams_gallery_foto")
+
+
+
+/%h1 this is the face of user, like a person status
+/= image_tag @amsfood.imagefood.url(:medium, class: "ams_gallery_foto")
+/%h2= @amsfood.titlerus
+/%br
+/%h3= @amsfood.descriptionrus
+/%br
+
+/= link_to "Back", amsfoods_path, class: "btn btn-default"
+/- if user_signed_in?
+/  = link_to "Edit", edit_amsfood_path, class: "btn btn-default"
+/  = link_to "delete", amsfood_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
