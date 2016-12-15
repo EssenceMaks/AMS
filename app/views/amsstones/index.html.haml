@@ -16,8 +16,17 @@
 
           
         %div.amsgroupproduction
+          = render 'layouts/navigation'
+
           %div.stprod.amsproductsstones
             %h2=t 'welcome.stoneproduction' 
+            .div.textcenter
+              - Stonecategory.all.each do |cat|
+                /= cat.categoryname
+                %h3.inline
+
+                  = link_to cat.categoryname , cat
+                 
             .categoryblok
               - @amsstone.each do |s|
                 .allproductplate.inline
@@ -29,11 +38,7 @@
                     %h5.stoneplatetext= link_to truncate(s.number, length: 20), s
                   - else
                     %h5.stoneplatetext #{truncate(s.number, length: 20)}
-            .div
-
-              - Stonecategory.all.each do |cat|
-                /= cat.categoryname
-                %h3= link_to cat.categoryname , cat
+            
                 /= link_to " #{truncate(s.descriptionrus, length: 7)}", pr.url, target: '_blank'
         /
           %div.stone_gallery

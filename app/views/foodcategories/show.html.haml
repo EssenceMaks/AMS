@@ -1,9 +1,0 @@
-.bodyams
-  %h1 ЭТО Food КАТЕГОРИЯ
-  %h2= @foodcategory.categoryname
-  %br
-  
-  = link_to "Back", foodcategories_path, class: "btn btn-default"
-  - if user_signed_in?
-    = link_to "Edit", edit_foodcategory_path, class: "btn btn-default"
-    = link_to "delete", foodcategory_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"

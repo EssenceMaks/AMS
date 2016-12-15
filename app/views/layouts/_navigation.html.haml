@@ -1,0 +1,27 @@
+.dropdown.navprogdrop.inline
+  %button#dropdownMenu1.btn.btn-default.dropdown-toggle#navbuttton{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button" }
+    =t 'welcome.navigateproduction'
+    %span.caret
+  %ul.navprogdropmenu.dropdown-menu{"aria-labelledby" => "dropdownMenu1", :style => "background-color: #ffd700;"}
+    %div.navprogstone.stonecolor
+      = link_to amsstones_path do
+        %h2=t 'welcome.stoneproduction'
+      - Stonecategory.all.each do |cat|
+        .navprogfoodbloks
+          %h3
+            = link_to cat.categoryname , cat
+            #{":"}
+
+          - cat.amsstones.each do |s|
+            %h4= link_to truncate(s.titlerus, length: 25), cat 
+    %div.navprogfood.foodcolor 
+      = link_to amsfoods_path do
+        %h2=t 'welcome.foodproduction' 
+      - Foodcategory.all.each do |food|
+        .navprogfoodbloks         
+          %h3
+            = link_to food.categoryname , food
+            #{":"}
+
+          - food.amsfoods.each do |s|
+            %h4= link_to truncate(s.titlerus, length: 25), food 

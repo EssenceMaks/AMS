@@ -34,6 +34,13 @@ class AmsgroupsController < ApplicationController
 			@amsfood = Amsfood.where(category_id: @category_id).order("created_at DESC")
 		end
 
+		if params[:foodcategory].blank?
+			@amsfood = Amsfood.all.order("created_at DESC")
+			@foodcategory = Foodcategory.all.order("created_at DESC")
+		else
+			@foodcategory_id = Foodcategory.find_by(categoryname: params[:foodcategory]).id
+			@amsfood = Amsfood.where(category_id: @category_id).order("created_at DESC")
+		end
 	end
 
 	def show

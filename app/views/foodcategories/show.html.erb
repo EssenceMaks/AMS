@@ -1,0 +1,53 @@
+<%= render 'layouts/miniheader' %>
+<div class='bodycurrentfoodcategory'>
+
+  <div class='headplatescurrentstonecategory'>
+		<div style="padding-left: 20px; padding-top: 10px;">  	<%= render 'layouts/navigation' %> </div>
+  		<div class="headcurrentstonecategory">
+
+
+
+		  <h1 class="inline textleft "> <%=@foodcategory.categoryname%> :
+		  		<%- if user_signed_in? %>
+		  			<a "><%= link_to "Edit", edit_foodcategory_path, class: "textleft", style:"color: #50156E" %></a> 
+		  		<% end %>
+		  		
+		  </h1> 
+
+		  <h1 class="inline textright">
+		  		<%= link_to amsgroups_path do %> 
+		  			<%= t 'welcome.mainmenu'%>
+		  		<% end%>
+		  </h1>
+		</div>
+    <div class='miniplatescurrentstonecategory'>
+      <% foodsofcategory = @foodcategory.amsfoods %>
+      <% foodsofcategory.each_with_index do |catfood, i| %>
+        	<% element_id = "stab-nav-#{i+1}" %>
+        
+	        <input type="radio" name="stabs" id="<%= element_id %>" <% if i==0 %>checked<%end%>>
+	        <label class=" btnplate" for="<%= element_id %>">
+	        	<div class = 'currentplate'>
+		            <div class = 'textcenter'><h5> <%= truncate(catfood.titlerus, length: 13)%> </h5></div>
+		            <div class = 'imagecurrentplate'><%=image_tag catfood.imagefood.url(:small), :class => "imagecurrentplate" %> </div>
+		        </div>
+	        </label>
+	
+      <% end %>
+	      <div class="stabs" >
+	        <% foodsofcategory.each_with_index do |catfood, i| %>
+		          <div>
+		            <h2  class="inline textleft width380" > <%=@foodcategory.categoryname%> </h2>
+		            <h3  class="inline textcenter width380" > <%=catfood.titlerus %> </h3>
+
+		            	<div class=" textleft " > <%= link_to (image_tag catfood.imagefood.url(:hard),:class => "style_image"), catfood %>
+		            	</div>
+		            	<!--<div class=" textcenter " > <%=image_tag catfood.imagefood.url(:hard), :class => "style_image" %>
+		            	</div> -->
+		            <h5 class= "textcenter" > <%=catfood.descriptionrus %> </h5>
+		          </div>
+	        <% end %>
+	      </div>
+    </div>
+  </div>
+</div>

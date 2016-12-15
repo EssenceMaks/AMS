@@ -1,7 +1,7 @@
 = render 'layouts/miniheader'
 .headcurrentstone
   .div.headcurrentstoneams
-    %h1.textcenter=t 'welcome.stoneproduction'
+    %h1.textcenter=t 'welcome.foodproduction'
   .div.headcurrentstoneblocks.inline
     .div.headcurrentstonefirstblock.inline.left
       %h1= link_to @amsfood.foodcategory.categoryname, foodcategory_path(@amsfoody)
@@ -20,7 +20,7 @@
         = link_to "Edit", edit_amsfood_path, class: "btn btn-default"
         = link_to "delete", amsfood_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"
     .div.headcurrentstonethirdblock.inline
-      %h1= link_to "All Stones", amsfoods_path
+      %h1= link_to "All Foods", amsfoods_path
 .bodycurrentstone
   = image_tag @amsfood.imagefood.url(:hard, class: "ams_gallery_foto")
 

@@ -665,11 +665,18 @@ label {
       background-color: #50156E;
       border: 2px solid #ffd700;
     }
+        .amsproductsstones > .textcenter > h3 {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
     .amsproductsfoods {
   background-color: #851452;
   border: 2px solid #ffd700;
     }
-
+        .amsproductsfoods > .textcenter > h3 {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
 
 
 .stprod h3 {
@@ -687,7 +694,6 @@ label {
 
 .stprod h4 {
   text-align: center;
-  
   color: #ffd700;
 } 
 .stoneplatetext {

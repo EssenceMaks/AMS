@@ -1,0 +1,69 @@
+.navprogdrop {
+ 	background-color: none;
+}
+	#navbuttton {
+       background-color: #ffd700;
+       height: 40px;
+       font-size: 22px;
+	}
+
+.navprogdropmenu {
+	background-color: #ffd700;
+	width: 684px;
+	height: auto;
+}
+
+.navprogstone {
+	width: 320px;
+	height: 100%;
+	display: inline-block;
+	float: left;
+	padding: 5px 10px;
+	margin: 0px 10px;
+}
+	.navprogstone > a > h2  {
+			color: #ffd700
+	}
+		.navprogstonebloks {
+			width: 300px;
+		}
+		.navprogstonebloks > h3 {
+			text-align: left;
+			color: #ffd700
+		}
+		.navprogstonebloks > h3 > a {
+			text-align: left;
+			color: #ffd700
+		}
+		.navprogstonebloks > h4 {
+			padding-left: 20px;
+		}
+
+
+.navprogfood {
+	width: 320px;
+	height: 100%;
+	display: inline-block;
+		padding: 5px 10px;
+		margin: 0px 10px;
+}
+		.navprogfood  > a > h2 {
+			color: #ffd700
+		}
+		.navprogfoodbloks {
+			width: 300px;
+		}
+
+		.navprogfoodbloks > h3 {
+			text-align: left;
+			color: #ffd700
+		}
+
+		.navprogfoodbloks > h3 > a {
+			text-align: left;
+			color: #ffd700
+		}
+
+		.navprogfoodbloks > h4 {
+			padding-left: 20px;
+		}
