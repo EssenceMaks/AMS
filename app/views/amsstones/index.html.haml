@@ -2,6 +2,11 @@
   .bodyhead
     %div.amslogo
       = link_to image_tag( 'logo-ams.svg', :class => 'ams_logo_head' ), amsgroups_path, target: '_blank'
+      %div.amslogolanguage
+        %h3
+          = link_to_unless_current "English",  amsgroups_path(locale: "en")
+          \#{link_to_unless_current "Arabic",  amsgroups_path(locale: "ar")} |
+          \#{link_to_unless_current "Rusian",  amsgroups_path(locale: "ru")}
     %div.tabbed
       %input{:type=>"radio", :name => "tabs", :id=>"tab-nav-1", :checked=> true}
         %label{:for=>"tab-nav-1"}=t 'welcome.ams'
