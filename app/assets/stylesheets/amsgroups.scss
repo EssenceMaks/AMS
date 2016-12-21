@@ -33,14 +33,91 @@ label {
               width: 690px;
               height: 243px;
         }
+      .amslogolanguage {
+        width: 600px;
+        height: 50px;
+        position: absolute;
+        margin-top: -50px;
+        opacity: 0;
+      }
+
+      .amslogolanguage:hover{
+        opacity: 1;
+
+      }
+      .amslogolanguage > h3 {
+        width: 460px;
+                margin: 5px 3px;
+                display: inline-block;
+                  margin-bottom: 0;
+                      margin-left: 232px;
+                  font-weight: normal;
+                  text-align: center;
+                  vertical-align: middle;
+                      word-spacing: 75px;
+                  border-radius: 6px;
+                  color: #ffd700;
+                  background-color: #50156E;
+                  border-radius: 4px;
+                padding: 10px 16px;
+                  font-size: 20px;
+                  line-height: 1.3333333;
+                    
+                /*background: #50156E;*/
+
+                  -webkit-user-select: none;
+                  -moz-user-select: none;
+                  -ms-user-select: none;
+                  user-select: none;
+      }
+      /*
+            .logolanguage {
+                width: 180px;
+                margin: 5px 3px;
+                display: inline-block;
+                  margin-bottom: 0;
+                  font-weight: normal;
+                  text-align: center;
+                  vertical-align: middle;
+
+                  border-radius: 6px;
+                  color: #ffd700;
+                  background-color: #50156E;
+                  border-color: #ffd700;
+
+                touch-action: manipulation;
+                  cursor: pointer;
+
+                  border: 4px double #ffd700;
+                  white-space: nowrap;
+                  line-height: 1.42857143;
+                  border-radius: 4px;
+                padding: 10px 16px;
+                  font-size: 20px;
+                  line-height: 1.3333333;
+                    
 
 
+                  -webkit-user-select: none;
+                  -moz-user-select: none;
+                  -ms-user-select: none;
+                  user-select: none;
+            }
+            .logolanguage:hover {  
+
+                  color: #50156E;
+                  background: #ffd700;
+                  font-weight: bold;
+                  font-size: 20px;
+                  border: 4px double #50156E;
+                  text-decoration: none;
+                }
+        */
 .tabbed {
   color: #EBCB79;
   background-color: none;
   width: 900px;
   margin: 5px auto;
-
 }
 
 .tabbed > input {
@@ -708,6 +785,13 @@ label {
   padding: 5px;
   white-space: nowrap;
   overflow: auto;
+}
+
+.categoryblokstonefood {
+  width: 830px;
+  height: auto;
+  margin: 5px 20px;
+  padding: 5px;
 }
       .stonecolor {
         background-color: #50156E;

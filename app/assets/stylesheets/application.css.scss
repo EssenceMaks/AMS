@@ -42,7 +42,14 @@ body {
     	width: 900px;
     	margin: 0px auto;
     }
-
+    .sign {
+        opacity: 0;
+    }
+        .sign:hover > a {
+        opacity: 1;
+        color: black;
+        font-size: 50px;
+    }
 .background {
 	background-image: url('points2.png');
 }

@@ -1,7 +1,7 @@
 %div.bodyams
   .bodyhead
     %div.amslogo
-      = link_to image_tag( 'logo-ams.svg', :class => 'ams_logo_head' ), root_path, target: '_blank'
+      = link_to image_tag( 'logo-ams.svg', :class => 'ams_logo_head' ), amsgroups_path, target: '_blank'
     %div.tabbed
       %input{:type=>"radio", :name => "tabs", :id=>"tab-nav-1", :checked=> true}
         %label{:for=>"tab-nav-1"}=t 'welcome.ams'
@@ -17,12 +17,18 @@
           
         %div.amsgroupproduction
           = render 'layouts/navigation'
-          %div.stprod.amsproductsstones
+          %div.stprod.amsproductsstones.foodcolor 
             %h2=t 'welcome.foodproduction' 
-            .categoryblok
+            .div.textcenter
+              - Foodcategory.all.each do |food|
+                /= cat.categoryname
+                %h3.inline
+
+                  = link_to food.categoryname , food
+            .categoryblokstonefood
               - @amsfood.each do |f|
                 .allproductplate.inline
-                  %h4= link_to truncate(f.titlerus, length: 14), f
+                  %h4= link_to truncate(f.titlerus, length: 20), f
                   .allproductplateimg
                     = link_to f do
                       = image_tag f.imagefood.url(:thumb)  
@@ -31,11 +37,6 @@
                   - else
                     %h5.stoneplatetext #{truncate(f.descriptionrus, length: 20)}
             .div
-
-              - Foodcategory.all.each do |food|
-                /= cat.categoryname
-                %h3= link_to food.categoryname , food
-                /= link_to " #{truncate(s.descriptionrus, length: 7)}", pr.url, target: '_blank'
         /
           %div.stone_gallery
             - @amsgroup.each_slice(3) do |group|

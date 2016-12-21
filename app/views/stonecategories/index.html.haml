@@ -1,7 +1,7 @@
 %div.bodyams
   .bodyhead
     %div.amslogo
-      = link_to image_tag( 'logo-ams.svg', :class => 'ams_logo_head' ), root_path, target: '_blank'
+      = link_to image_tag( 'logo-ams.svg', :class => 'ams_logo_head' ), amsgroups_path, target: '_blank'
     %div.tabbed
       %input{:type=>"radio", :name => "tabs", :id=>"tab-nav-1", :checked=> true}
         %label{:for=>"tab-nav-1"}=t 'welcome.ams'

@@ -1,8 +1,8 @@
 .dropdown.navprogdrop.inline
-  %button#dropdownMenu1.btn.btn-default.dropdown-toggle#navbuttton{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button" }
+  %button#dropdownMenu1.btn.btn-default.dropdown-toggle#navbuttton{ :"aria-expanded" => "", :"aria-haspopup" => "true", :"data-toggle" => "dropdown", :type => "button" }
     =t 'welcome.navigateproduction'
     %span.caret
-  %ul.navprogdropmenu.dropdown-menu{"aria-labelledby" => "dropdownMenu1", :style => "background-color: #ffd700;"}
+  %ul.navprogdropmenu.dropdown-menu{ :"aria-labelledby" => "dropdownMenu1", :style => "background-color: #ffd700;"}
     %div.navprogstone.stonecolor
       = link_to amsstones_path do
         %h2=t 'welcome.stoneproduction'
