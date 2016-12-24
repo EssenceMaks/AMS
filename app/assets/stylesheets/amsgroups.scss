@@ -229,13 +229,13 @@ label {
 
 .slides {
     height: 150px;
-    margin: 5px 0px;
-    margin-left: -54px;
+    margin: 0px 0px;
+    margin-left: -25px;
     overflow: hidden;
     position: relative;
-    width: 940px;
+    width: 880px;
     border-radius: 3px;
-    margin-top: -10px;
+    margin-top: 0px;
 }
       .slides ul {
           list-style:none;
@@ -459,7 +459,7 @@ label {
 
 .amsworknews{
   width: 400px;
-  height: 400px;
+  height: 440px;
   overflow-y: auto;
   margin: 0px auto;
   padding: 5px;
@@ -508,6 +508,11 @@ label {
       
     }
     .amsgroupfsbody{
+      height: 300px;
+      width: 388px;
+    }
+
+    .amsgroupfoodfoto {
       height: 300px;
       width: 388px;
     }

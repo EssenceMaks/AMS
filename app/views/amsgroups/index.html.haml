@@ -70,6 +70,18 @@
               %div.amsgroupfsbody
                 %div.slides_fs
                   %ul
+                    %li
+                      = link_to image_tag( 'stone1', :class => 'amsgroupfoodfoto' ), amsfoods_path
+                    %li
+                      = link_to image_tag( 'stone2', :class => 'amsgroupfoodfoto' ), amsfoods_path
+                    %li
+                      = link_to image_tag( 'stone3', :class => 'amsgroupfoodfoto' ), amsfoods_path
+                    %li
+                      = link_to image_tag( 'stone4', :class => 'amsgroupfoodfoto' ), amsfoods_path
+                  
+
+                /
+                  %ul
                     - @amsstonepicture.each_slice(1) do |stonepicture|
                       - stonepicture.each do  |st_pic|
                         %li
@@ -85,6 +97,19 @@
               %div.amsgroupfsbody
                 %div.slides_fs
                   %ul
+                    %li
+                      = link_to image_tag( 'food1', :class => 'amsgroupfoodfoto' ), amsfoods_path
+                    %li
+                      = link_to image_tag( 'food2', :class => 'amsgroupfoodfoto' ), amsfoods_path
+                    %li
+                      = link_to image_tag( 'food3', :class => 'amsgroupfoodfoto' ), amsfoods_path
+                    %li
+                      = link_to image_tag( 'food4', :class => 'amsgroupfoodfoto' ), amsfoods_path
+
+
+
+
+                  /
                     - @amsfoodpicture.each_slice(1) do |foodpicture|
                       - foodpicture.each do  |fo_pic|
                         %li
