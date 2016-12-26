@@ -16,11 +16,11 @@
         .panel-body
           = f.collection_select :foodcategory_id, Foodcategory.all, :id, :categoryname, {promt: "Выберите Категорию"}, class: 'form-control'
 
-          = f.input :titlerus, label: 'resume Name', input_html: { title: "NAME of your resume", class: 'form-control'}
+          = f.input :titlerus, label: 'resume Name', input_html: { title: "ИМЯ НОВОЙ ЕДИНИЦЫ ТОВАРА", class: 'form-control'}
           
-          = f.input :descriptionrus, label: 'resume Name', input_html: { title: "NAME of your resume", class: 'form-control'}
+          = f.input :descriptionrus, label: 'resume Name', input_html: { title: "ОПИСАНИЕ НОВОЙ ЕДИНИЦЫ ТОВАРА", class: 'form-control'}
           
-          = f.input :imagefood, label: 'Attach an image that will be in this resume', input_html: { class: 'form-control'}
+          = f.input :imagefood, label: 'Выберите изображение', input_html: { class: 'form-control'}
 
         .sub_button
           = f.button :submit, class: "btn btn-primary sub_button"
