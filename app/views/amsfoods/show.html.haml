@@ -4,7 +4,7 @@
     %h1.textcenter=t 'welcome.foodproduction'
   .div.headcurrentstoneblocks.inline
     .div.headcurrentstonefirstblock.inline.left
-      %h1= link_to truncate(@amsfood.foodcategory.categoryname, length: 20), foodcategory_path(@amsfoody)
+      %h1= link_to truncate(@amsfood.foodcategory.categoryname, length: 15), foodcategory_path(@amsfoody)
       .div= image_tag @amsfood.imagefood.url(:simple), class: "headcurrentstonepicture"
     .div.headcurrentstonesecondblock.inline.left
       %h1
