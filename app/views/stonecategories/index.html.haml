@@ -63,11 +63,11 @@
           .ams_contacts
             %h2=t 'welcome.contacts'
             %li.inline
-              = link_to image_tag( 'mail.svg', :class => 'mail' ), amsgroups_path, target: '_blank'
+              = link_to image_tag( 'mail.svg', :class => 'mail' ), "#", title: "Gmail", data: { confirm: "Mail adress is: international.ams.group@gmail.com", :style => ' font-size: 30px;' }
               %div.number international.ams.group@gmail.com
             %li
-              = link_to image_tag( 'skype.svg', :class => 'wel_contact' ), amsgroups_path, target: '_blank'
-              = link_to image_tag( 'facebook-square.svg', :class => 'wel_contact' ), amsgroups_path, target: '_blank'
+              = link_to image_tag( 'skype.svg', :class => 'wel_contact' ), "#", title: "Skype", data: { confirm: "Skype name is: international.ams.group ", :style => ' font-size: 30px;' }
+              = link_to image_tag( 'facebook-square.svg', :class => 'wel_contact' ), "https://www.facebook.com/AMS-International-Group-1180463538715714/?ref=page_internal", target: '_blank'
               
             %li
               = link_to image_tag( 'viber.svg', :class => 'wel_contact inline' ), amsgroups_path, target: '_blank'
