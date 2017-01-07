@@ -55,12 +55,57 @@
                       = image_tag s.imagegroup.url(:medium)
                   %h2= link_to s.titlerus, s
         %div
-            
+          %div.amsworktext
+
+            %div.amsworknews.right
+              %h1{:style => "color: #ffd700; text-align: center"} OUR NEWS
+              - @amsgroup.each do |group|
+                %h2
+                  - if user_signed_in?
+                    = link_to group.titlerus, group
+                  - else
+                    = group.titlerus
+                  .newstime.right
+                    %h5
+                      = group.updated_at.day
+                      ∕
+                      = group.updated_at.month
+                      ∕
+                      = group.updated_at.year
+                %h4{:style => "color: #ffd700;"}= group.descriptionrus
+                %hr{:style => "border: 2px double #50156E; margin-top: 10px;"}
+            %h1{:style => "color: #ffd700; text-align: center; margin-top: 0px;"}=t 'welcome.howweworktitle'
+            %p=t 'welcome.howweworktext' 
+          %div.amsgroupfoodandstone
+            %div.amsgroupfoodandstoneplate.inline
+              %div.amsgroupfshead.amsgroupfsheadgrey= link_to "AMS Stones", amsstones_path, class: " btn asmstone_button"
+              %div.amsgroupfsbody
+                %div.slides_fs
+                  %ul
+                    %li
+                      = link_to image_tag( 'stone1', :class => 'amsgroupfoodfoto' ), amsstones_path
+                    %li
+                      = link_to image_tag( 'stone2', :class => 'amsgroupfoodfoto' ), amsstones_path
+                    %li
+                      = link_to image_tag( 'stone3', :class => 'amsgroupfoodfoto' ), amsstones_path
+                    %li
+                      = link_to image_tag( 'stone4', :class => 'amsgroupfoodfoto' ), amsstones_path
+            %div.amsgroupfoodandstoneplate.inline
+              %div.amsgroupfshead.amsgroupfsheadred= link_to "AMS Foods", amsfoods_path, class: " btn asmfood_button"
+              %div.amsgroupfsbody
+                %div.slides_fs
+                  %ul
+                    %li
+                      = link_to image_tag( 'food1', :class => 'amsgroupfoodfoto' ), amsfoods_path
+                    %li
+                      = link_to image_tag( 'food2', :class => 'amsgroupfoodfoto' ), amsfoods_path
+                    %li
+                      = link_to image_tag( 'food3', :class => 'amsgroupfoodfoto' ), amsfoods_path
+                    %li
+                      = link_to image_tag( 'food4', :class => 'amsgroupfoodfoto' ), amsfoods_path
         %div 
           %div.amsworktext
-            %h2=t 'welcome.title'
-            %br 
-            %p=t 'welcome.paragraph'
+            = render 'layouts/navigation'
         %div
           %div.amsmap.right
             %iframe{:allowfullscreen => "", :frameborder => "0", :height => "350", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.730208596946!2d30.431012037035497!3d50.46474843315227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdc777aaaf995bf05!2z0KTQu9C-0YDQsCDQn9Cw0YDQug!5e0!3m2!1sru!2sua!4v1479894063059", :style => "border:0", :width => "450"}
